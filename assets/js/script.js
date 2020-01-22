@@ -10,11 +10,6 @@ var matchPair = 2
 var maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 var matches = 0;
 
-var modalElement = document.createElement("div");
-modalElement.textContent = "Congratulations! You have Won!";
-modalElement.className = "modal hidden";
-document.querySelector(".container").appendChild(modalElement);
-
 function addClicker () {
     gameCardDiv.addEventListener("click", handleClick);
 };
@@ -34,9 +29,37 @@ function unhideCard () {
     secondCardClicked.classList.remove("hidden");
     clearCardClicked();
     addClicker();
-    console.log("Timer ranout");
     },1500);
 };
+
+function showModal () {
+    var modalBox = document.createElement("div");
+    var modalContent = document.createElement("p")
+    modalContent.textContent = "Congratulations! You have Won! Please click anywhere to restart.";
+    modalContent.className = "modal-content";
+    modalBox.appendChild(modalContent);
+    modalBox.className = "modal-box hidden";
+    document.querySelector(".container").appendChild(modalBox);
+    document.querySelector(".modal-box").classList.remove("hidden");
+    gameCardDiv.addEventListener("click", hideModal);
+}
+function hideModal () {
+    document.querySelector(".modal-box").classList.add("hidden");
+    var cardCount = document.getElementById("gameCards").childElementCount
+    var backCards = document.querySelectorAll(".card-back");
+
+    for (i = 0; i < cardCount; i++) {
+        backCards[i].className = "";
+        backCards[i].className += "card-back";
+    }
+    restartGame();
+};
+
+function restartGame (event) {
+    matches = 0;
+    gameCardDiv.removeEventListener("click", hideModal);
+    clearCardClicked();
+}
 
 function shuffleCards () {
     var cardCount = document.getElementById("gameCards").childElementCount
@@ -90,24 +113,20 @@ function handleClick (event) {
         secondCardClicked = event.target;
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
-        console.log("second card")
         if (firstCardClass === secondCardClass) {
             addClicker();
             clearCardClicked();
             matches++
-            console.log("img matches")
         } else {
             unhideCard();
-            console.log("img does not match")
         }        
     } else {
        firstCardClicked = event.target;
        firstCardClass = firstCardClicked.previousElementSibling.className;
-       console.log("first card")
     }
 
     if (matches === maxMatches) {
-        document.querySelector(".modal").classList.remove("hidden");
+        showModal();
     }
 }
 
