@@ -160,6 +160,17 @@ body {
     background-image: url(../images/react-logo.png);
 }
 
+.modal {
+   position: fixed;
+   width: 700px;
+   height: 200px;
+   margin: 10% 25%;
+   background-color: skyblue;
+   font-size: 3em;
+   text-align: center;
+   padding-top: 120px;
+}
+
 .hidden {
     display: none;
 }
