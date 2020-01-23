@@ -10,6 +10,9 @@ var matchPair = 2
 var maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 var matches = 0;
 
+var attempts = 0;
+var gamesPlayed = 0;
+
 function addClicker () {
     gameCardDiv.addEventListener("click", handleClick);
 };
@@ -35,7 +38,7 @@ function unhideCard () {
 function showModal () {
     var modalBox = document.createElement("div");
     var modalContent = document.createElement("p")
-    modalContent.textContent = "Congratulations! You have Won! Please click outside this box to restart.";
+    modalContent.textContent = "Congratulations! You have Won! Please click any cards to restart.";
     modalContent.className = "modal-content";
     modalBox.appendChild(modalContent);
     modalBox.className = "modal-box hidden";
@@ -61,6 +64,21 @@ function restartGame (event) {
     gameCardDiv.removeEventListener("click", hideModal);
     clearCardClicked();
 }
+
+function displayStats () {
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
+};
+
+function calculateAccuracy (attempts, matches) {
+    return ((matches + gamesPlayed * maxMatches) / attempts * 100).toFixed(2) + "%";
+};
+
+function addTotalGames () {
+    gamesPlayed++;
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+};
 
 function shuffleCards () {
     var cardCount = document.getElementById("gameCards").childElementCount
@@ -137,10 +155,9 @@ function handleClick (event) {
 }
 
 addClicker();
-shuffleCards();
+// shuffleCards();
 
-var attempts = 0;
-var gamesPlayed = 0;
+
 
 function displayStats () {
     document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;

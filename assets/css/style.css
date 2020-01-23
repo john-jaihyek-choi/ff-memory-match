@@ -1,6 +1,9 @@
 
 body {
-    height: 750px;
+   height: 97vh;
+   background-image: url(../images/lfz-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
  }
   
  .container {
@@ -8,9 +11,6 @@ body {
     height: 100%;
     max-width: 1500px;
     margin: auto;
-    background-image: url(../images/lfz-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-wrap: wrap;
  }
