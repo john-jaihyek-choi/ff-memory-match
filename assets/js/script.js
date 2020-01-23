@@ -35,7 +35,7 @@ function unhideCard () {
 function showModal () {
     var modalBox = document.createElement("div");
     var modalContent = document.createElement("p")
-    modalContent.textContent = "Congratulations! You have Won! Please click anywhere to restart.";
+    modalContent.textContent = "Congratulations! You have Won! Please click outside this box to restart.";
     modalContent.className = "modal-content";
     modalBox.appendChild(modalContent);
     modalBox.className = "modal-box hidden";
@@ -43,6 +43,7 @@ function showModal () {
     document.querySelector(".modal-box").classList.remove("hidden");
     gameCardDiv.addEventListener("click", hideModal);
 }
+
 function hideModal () {
     document.querySelector(".modal-box").classList.add("hidden");
     var cardCount = document.getElementById("gameCards").childElementCount
@@ -116,9 +117,13 @@ function handleClick (event) {
         if (firstCardClass === secondCardClass) {
             addClicker();
             clearCardClicked();
-            matches++
+            matches++;
+            attempts++;
+            displayStats();
         } else {
             unhideCard();
+            attempts++;
+            displayStats();
         }        
     } else {
        firstCardClicked = event.target;
@@ -127,8 +132,27 @@ function handleClick (event) {
 
     if (matches === maxMatches) {
         showModal();
+        addTotalGames();
     }
 }
 
 addClicker();
 shuffleCards();
+
+var attempts = 0;
+var gamesPlayed = 0;
+
+function displayStats () {
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
+};
+
+function calculateAccuracy (attempts, matches) {
+    return ((matches + gamesPlayed * maxMatches) / attempts * 100).toFixed(2) + "%";
+};
+
+function addTotalGames () {
+    gamesPlayed++;
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+};
