@@ -36,6 +36,7 @@ function unhideCard () {
 };
 
 function showModal () {
+    $("div.modal-box").remove();
     var modalBox = document.createElement("div");
     var modalContent = document.createElement("p")
     modalContent.textContent = "Congratulations! You have Won! Please click any cards to restart.";
@@ -156,20 +157,3 @@ function handleClick (event) {
 
 addClicker();
 // shuffleCards();
-
-
-
-function displayStats () {
-    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
-    document.getElementById("attempts").firstElementChild.textContent = attempts;
-    document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
-};
-
-function calculateAccuracy (attempts, matches) {
-    return ((matches + gamesPlayed * maxMatches) / attempts * 100).toFixed(2) + "%";
-};
-
-function addTotalGames () {
-    gamesPlayed++;
-    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
-};

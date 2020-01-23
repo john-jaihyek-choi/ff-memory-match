@@ -7,163 +7,201 @@
 body {
    height: 97vh;
    background-color: teal;
-   /* background-image: url(../images/lfz-background.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
  }
   
- .container {
-    width: 100%;
-    height: 100%;
-    max-width: 1500px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
- }
-  
- .row {
-    /* margin: 0 5%; */
- }
-  
- .col-1 {
-    width: 8%;
- }
-  
- .col-2 {
-    width: 16%;
- }
-  
- .col-3 {
-    width: 24%;
- }
-  
- .col-4 {
-    width: 32%;
- }
-  
- .col-5 {
-    width: 40%;
- }
-  
- .col-6 {
-    width: 48%;
- }
-  
- .col-7 {
-    width: 56%;
- }
-  
- .col-8 {
-    width: 64%;
- }
-  
- .col-9 {
-    width: 72%;
- }
-  
- .col-10 {
-    width: 80%;
- }
-  
- .col-11 {
-    width: 88%;
- }
-  
- .col-12 {
-    width: 96%;
- }
+.container {
+   width: 100%;
+   height: 100%;
+   max-width: 1500px;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+    
+.col-1 {
+   width: 8%;
+}
+
+.col-2 {
+   width: 16%;
+}
+
+.col-3 {
+   width: 24%;
+}
+
+.col-4 {
+   width: 32%;
+}
+
+.col-5 {
+   width: 40%;
+}
+
+.col-6 {
+   width: 48%;
+}
+
+.col-7 {
+   width: 56%;
+}
+
+.col-8 {
+   width: 64%;
+}
+
+.col-9 {
+   width: 72%;
+}
+
+.col-10 {
+   width: 80%;
+}
+
+.col-11 {
+   width: 88%;
+}
+
+.col-12 {
+   width: 96%;
+}
   
  .headerRow {
-    height: 10%;
-    font-size: 3em;
-    text-align: center;
-    font-weight: bold;
+   height: 6%;
+   font-size: 3em;
+   text-align: center;
+   font-weight: bold;
+   background-color: violet;
  }
   
  .gameRow {
-    height: 80%;
-    display: flex;
-    justify-content: center;
+   height: 94%;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   flex-basis: 78%;
  }
   
  .statColumn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+   height: 18%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   flex-basis: 100%;
+   background-color: tomato;
+   border-radius: 10px;
  }
   
  .statBox{
-    display: flex;
-    width: 80%;
-    height: 13%;
-    background-color: skyblue;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   text-align: center;
+   background-color: whitesmoke;
+ }
+
+ .statBox:first-child {
+   height: 20%;
+   flex-basis: 100%;
+ }
+
+ .scoreHead {
+   height: 20%;
+   flex-basis: calc(100%/3);
+ }
+
+ .scoreCount {
+   height: 60%;
+   flex-basis: calc(100%/3);
  }
   
- .cardColumn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
- }
+.cardColumn {
+   height: 80%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-basis: 100%;
+   background-color: thistle;
+}
   
- .card {
-    width: 16%;
-    height: 30%;
-    background-image: url(../images/lfz-card.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
- }
+.card {
+   width: 16%;
+   height: 30%;
+   position: relative;
+}
  
- .card-front, .card-back {
-     height: 100%;
-     width: 100%;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     position: absolute;
- }
+.card-front, .card-back {
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: absolute;
+   border-radius: 10px;
+}
 
- .card-back {
-     background-image: url(../images/lfz-card.jpg);
- }
+.sideBar {
+   display: flex;
+   flex-basis: 19%;
+   flex-wrap: wrap;
+   background-color: yellowgreen;
+   height: 93%;
+   border-radius: 10px;
+   margin-left: 1%;
+   align-self: center;
+}
 
- .js-logo {
-    background-image: url(../images/js-logo.png);
- }
+.utility {
+   display: flex;
+   flex-flow: column;
+   background-color: coral;
+   flex-basis: 100%;
+   height: 49%;
+   border-radius: 10px;
+   align-self: flex-end;
+}
+
+.card-back {
+   background-image: url(../images/lfz-card.jpg);
+}
+
+.js-logo {
+   background-image: url(../images/js-logo.png);
+}
 
 .css-logo {
-    background-image: url(../images/css-logo.png);
+   background-image: url(../images/css-logo.png);
 }
 
 .docker-logo {
-    background-image: url(../images/docker-logo.jpg);
+   background-image: url(../images/docker-logo.jpg);
 }
 
 .gitHub-logo {
-    background-image: url(../images/gitHub-logo.png);
+   background-image: url(../images/gitHub-logo.png);
 }
 
 .html-logo {
-    background-image: url(../images/html-logo.png);
+   background-image: url(../images/html-logo.png);
 }
 
 .mysql-logo {
-    background-image: url(../images/mysql-logo.jpg);
+   background-image: url(../images/mysql-logo.jpg);
 }
 
 .node-logo {
-    background-image: url(../images/node-logo.png);
+   background-image: url(../images/node-logo.png);
 }
 
 .php-logo {
-    background-image: url(../images/php-logo.jpeg);
+   background-image: url(../images/php-logo.jpeg);
 }
 
 .react-logo {
-    background-image: url(../images/react-logo.png);
+   background-image: url(../images/react-logo.png);
 }
 
 .modal-box {
@@ -174,7 +212,6 @@ body {
    top: 15%;
    left: 40%;
    background-color: skyblue;
-   justify-content: space-around;
    align-items: center;
 }
 
@@ -184,5 +221,5 @@ body {
 }
 
 .hidden {
-    display: none;
+   display: none;
 }
