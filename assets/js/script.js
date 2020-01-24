@@ -37,6 +37,67 @@ function unhideCard () {
 
 function statOverview () {};
 
+function restartGame (event) {
+    resetStats();
+    gameCardDiv.removeEventListener("click", hideModal);
+    clearCardClicked();
+}
+
+function displayStats () {
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
+};
+
+function resetStats () {
+    matches = 0;
+    attempts = 0;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
+}
+
+function calculateAccuracy (attempts, matches) {
+    return (matches / attempts * 100).toFixed(2) + "%";
+};
+
+function addTotalGames () {
+    gamesPlayed++;
+    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
+};
+
+function handleClick (event) {
+    if (event.target.className.indexOf("card-back") === -1) {
+        return;
+    }
+    event.target.classList.add("hidden");
+
+    if (firstCardClicked) {
+        secondCardClicked = event.target;
+        secondCardClass = secondCardClicked.previousElementSibling.className;
+        removeClicker();
+        if (firstCardClass === secondCardClass) {
+            matches++;
+            attempts++;
+            addClicker();
+            clearCardClicked();
+            displayStats();
+        } else {
+            attempts++;
+            unhideCard();
+            displayStats();
+        }        
+    } else {
+       firstCardClicked = event.target;
+       firstCardClass = firstCardClicked.previousElementSibling.className;
+    }
+
+    if (matches === maxMatches) {
+        showModal();
+        addTotalGames();
+    }
+}
+
+//stage1
 function showModal () {
     var modalBox = document.createElement("div");
     document.querySelector(".container").appendChild(modalBox);
@@ -81,34 +142,6 @@ function hideModal () {
     restartGame();
 };
 
-function restartGame (event) {
-    resetStats();
-    gameCardDiv.removeEventListener("click", hideModal);
-    clearCardClicked();
-}
-
-function displayStats () {
-    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
-    document.getElementById("attempts").firstElementChild.textContent = attempts;
-    document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
-};
-
-function resetStats () {
-    matches = 0;
-    attempts = 0;
-    document.getElementById("attempts").firstElementChild.textContent = attempts;
-    document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
-}
-
-function calculateAccuracy (attempts, matches) {
-    return (matches / attempts * 100).toFixed(2) + "%";
-};
-
-function addTotalGames () {
-    gamesPlayed++;
-    document.getElementById("gamesPlayed").firstElementChild.textContent = gamesPlayed;
-};
-
 function shuffleCards () {
     var cardCount = document.getElementById("gameCards").childElementCount
     var cardImgClass = $("div.card-front").attr("class").split(" ");
@@ -126,18 +159,6 @@ function shuffleCards () {
         "html-logo",
         "gitHub-logo",
         "gitHub-logo",
-        "mysql-logo",
-        "mysql-logo",
-        "php-logo",
-        "php-logo",
-        "react-logo",
-        "react-logo",
-        "node-logo",
-        "node-logo",
-        "css-logo",
-        "css-logo",
-        "docker-logo",
-        "docker-logo"
     ];
 
     for (i = classImgArray.length - 1; i >= 0; i--) {
@@ -150,38 +171,7 @@ function shuffleCards () {
         frontCards[i].classList.add(classImgArray[i]);
     };
 }
-
-function handleClick (event) {
-    if (event.target.className.indexOf("card-back") === -1) {
-        return;
-    }
-    event.target.classList.add("hidden");
-
-    if (firstCardClicked) {
-        secondCardClicked = event.target;
-        secondCardClass = secondCardClicked.previousElementSibling.className;
-        removeClicker();
-        if (firstCardClass === secondCardClass) {
-            matches++;
-            attempts++;
-            addClicker();
-            clearCardClicked();
-            displayStats();
-        } else {
-            attempts++;
-            unhideCard();
-            displayStats();
-        }        
-    } else {
-       firstCardClicked = event.target;
-       firstCardClass = firstCardClicked.previousElementSibling.className;
-    }
-
-    if (matches === maxMatches) {
-        showModal();
-        addTotalGames();
-    }
-}
+//
 
 addClicker();
-// shuffleCards();
+shuffleCards();
