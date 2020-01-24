@@ -104,10 +104,6 @@ body {
  .card {
     width: 16%;
     height: 30%;
-    background-image: url(../images/lfz-card.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
  }
  
@@ -163,6 +159,7 @@ body {
 .modal-box {
    position: fixed;
    display: flex;
+   flex-wrap: wrap;
    height: 50vh;
    width: 25%;
    top: 15%;
@@ -179,4 +176,10 @@ body {
 
 .hidden {
     display: none;
+}
+
+.modal-button {
+   width: 200px;
+   height: 100px;
+   font-size: 2em;
 }
