@@ -155,7 +155,7 @@ function handleClick (event) {
 }
 
 addClicker();
-// shuffleCards();
+shuffleCards();
 
 
 
