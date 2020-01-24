@@ -35,17 +35,38 @@ function unhideCard () {
     },1500);
 };
 
+function statOverview () {};
+
 function showModal () {
-    $("div.modal-box").remove();
     var modalBox = document.createElement("div");
-    var modalContent = document.createElement("p")
-    modalContent.textContent = "Congratulations! You have Won! Please click any cards to restart.";
-    modalContent.className = "modal-content";
-    modalBox.appendChild(modalContent);
-    modalBox.className = "modal-box hidden";
     document.querySelector(".container").appendChild(modalBox);
+    modalBox.className = "modal-box hidden";
+    
+    var modalContent1 = document.createElement("p");
+    modalContent1.textContent = "Congratulations! You have completed Stage I";
+    modalBox.appendChild(modalContent1);
+    modalContent1.className = "modal-content";
+
+    var modalContent2 = document.createElement("p");
+    modalContent2.textContent = "Would you like to proceed to the next stage?";
+    modalBox.appendChild(modalContent2);
+    modalContent2.className = "modal-content";
+
+    var modalButtonRestart = document.createElement("button");
+    modalBox.appendChild(modalButtonRestart);
+    modalButtonRestart.className = "modal-button restart";
+    var modalButtonRestartContent = document.querySelector("button.restart");
+    modalButtonRestartContent.innerHTML = "I Give Up";
+    
+    var modalButtonNextStage = document.createElement("button");
+    modalBox.appendChild(modalButtonNextStage);
+    modalButtonNextStage.className = "modal-button nextStage";
+    var modalButtonNextStageContent = document.querySelector("button.nextStage");
+    modalButtonNextStageContent.innerHTML = "Let's Go!";
+
     document.querySelector(".modal-box").classList.remove("hidden");
-    gameCardDiv.addEventListener("click", hideModal);
+    document.querySelector("button.restart").addEventListener("click", hideModal);
+    document.querySelector("button.nextStage").addEventListener("click", )
 }
 
 function hideModal () {
@@ -61,7 +82,7 @@ function hideModal () {
 };
 
 function restartGame (event) {
-    matches = 0;
+    resetStats();
     gameCardDiv.removeEventListener("click", hideModal);
     clearCardClicked();
 }
@@ -72,8 +93,15 @@ function displayStats () {
     document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
 };
 
+function resetStats () {
+    matches = 0;
+    attempts = 0;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
+}
+
 function calculateAccuracy (attempts, matches) {
-    return ((matches + gamesPlayed * maxMatches) / attempts * 100).toFixed(2) + "%";
+    return (matches / attempts * 100).toFixed(2) + "%";
 };
 
 function addTotalGames () {
@@ -127,21 +155,21 @@ function handleClick (event) {
     if (event.target.className.indexOf("card-back") === -1) {
         return;
     }
-    event.target.className += " hidden";
+    event.target.classList.add("hidden");
 
     if (firstCardClicked) {
         secondCardClicked = event.target;
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
         if (firstCardClass === secondCardClass) {
-            addClicker();
-            clearCardClicked();
             matches++;
             attempts++;
+            addClicker();
+            clearCardClicked();
             displayStats();
         } else {
-            unhideCard();
             attempts++;
+            unhideCard();
             displayStats();
         }        
     } else {
