@@ -103,20 +103,20 @@ body {
  }
 
  .statBox:first-child {
-   height: 20%;
+   height: 30%;
    flex-basis: 100%;
  }
 
  .scoreHead {
-   height: 20%;
+   height: 35%;
    flex-basis: calc(100%/3);
  }
 
  .scoreCount {
-   height: 60%;
+   height: 35%;
    flex-basis: calc(100%/3);
  }
-  
+
 .cardColumn {
    height: 80%;
    display: flex;
