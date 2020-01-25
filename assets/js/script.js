@@ -159,6 +159,18 @@ function shuffleCards () {
         "html-logo",
         "gitHub-logo",
         "gitHub-logo",
+        "mysql-logo",
+        "mysql-logo",
+        "php-logo",
+        "php-logo",
+        "react-logo",
+        "react-logo",
+        "node-logo",
+        "node-logo",
+        "css-logo",
+        "css-logo",
+        "docker-logo",
+        "docker-logo"
     ];
 
     for (i = classImgArray.length - 1; i >= 0; i--) {

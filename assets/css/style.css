@@ -131,6 +131,15 @@ body {
    width: 15%;
    height: 30%;
    position: relative;
+   cursor: pointer;
+}
+
+.card:hover {
+   border: 5px solid #55FF2B;
+   margin: -5px;
+   border-radius: 15px;
+   transform: scale(1.05);
+   transition: transform 0.25s;
 }
  
 .card-front, .card-back {
@@ -162,6 +171,14 @@ body {
    height: 49%;
    border-radius: 10px;
    align-self: flex-end;
+}
+
+.itemBar {
+   background-color: cornflowerblue;
+   
+   margin: auto 0;
+   height: 49%;
+   border-radius: 10px;
 }
 
 .card-back {
