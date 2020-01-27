@@ -93,7 +93,7 @@ var actionIconColumnClassList = [
 ];
 for (i = 0; i < actionIconColumnClassList.length; i++) {
     var actionIconColumn = document.createElement("aside");
-    actionIconColumn.className = "actionIconColumn " + actionIconColumnClassList[i];
+    actionIconColumn.className = "actionIcon standby " + actionIconColumnClassList[i];
     gameRow.append(actionIconColumn);
 };
 
@@ -186,24 +186,24 @@ function stage1() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    // //shuffle
-    // var cardCount = document.getElementById("gameCards").childElementCount;
-    // var frontCards = document.querySelectorAll(".card-front");
+    //shuffle
+    var cardCount = document.getElementById("gameCards").childElementCount;
+    var frontCards = document.querySelectorAll(".card-front");
 
-    // for (i = 0; i < cardCount; i++) {
-    //     frontCards[i].className = "";
-    //     frontCards[i].className += "card-front";
-    // };
+    for (i = 0; i < cardCount; i++) {
+        frontCards[i].className = "";
+        frontCards[i].className += "card-front";
+    };
 
-    // for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-    //     var randomIndex = Math.floor(Math.random() * i);
-    //     var tempIndex = cardFrontClassList[i];
+    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * i);
+        var tempIndex = cardFrontClassList[i];
 
-    //     cardFrontClassList[i] = cardFrontClassList[randomIndex];
-    //     cardFrontClassList[randomIndex] = tempIndex;
+        cardFrontClassList[i] = cardFrontClassList[randomIndex];
+        cardFrontClassList[randomIndex] = tempIndex;
 
-    //     frontCards[i].classList.add(cardFrontClassList[i]);
-    // };
+        frontCards[i].classList.add(cardFrontClassList[i]);
+    };
 };
 
 ////6 x 2
@@ -337,24 +337,24 @@ function stage3() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    // //shuffle
-    // var cardCount = document.getElementById("gameCards").childElementCount;
-    // var frontCards = document.querySelectorAll(".card-front");
+    //shuffle
+    var cardCount = document.getElementById("gameCards").childElementCount;
+    var frontCards = document.querySelectorAll(".card-front");
 
-    // for (i = 0; i < cardCount; i++) {
-    //     frontCards[i].className = "";
-    //     frontCards[i].className += "card-front";
-    // };
+    for (i = 0; i < cardCount; i++) {
+        frontCards[i].className = "";
+        frontCards[i].className += "card-front";
+    };
 
-    // for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-    //     var randomIndex = Math.floor(Math.random() * i);
-    //     var tempIndex = cardFrontClassList[i];
+    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * i);
+        var tempIndex = cardFrontClassList[i];
 
-    //     cardFrontClassList[i] = cardFrontClassList[randomIndex];
-    //     cardFrontClassList[randomIndex] = tempIndex;
+        cardFrontClassList[i] = cardFrontClassList[randomIndex];
+        cardFrontClassList[randomIndex] = tempIndex;
 
-    //     frontCards[i].classList.add(cardFrontClassList[i]);
-    // };
+        frontCards[i].classList.add(cardFrontClassList[i]);
+    };
 };
 
 function stage4() {
@@ -430,24 +430,24 @@ function stage4() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    // //shuffle
-    // var cardCount = document.getElementById("gameCards").childElementCount;
-    // var frontCards = document.querySelectorAll(".card-front");
+    //shuffle
+    var cardCount = document.getElementById("gameCards").childElementCount;
+    var frontCards = document.querySelectorAll(".card-front");
 
-    // for (i = 0; i < cardCount; i++) {
-    //     frontCards[i].className = "";
-    //     frontCards[i].className += "card-front";
-    // };
+    for (i = 0; i < cardCount; i++) {
+        frontCards[i].className = "";
+        frontCards[i].className += "card-front";
+    };
 
-    // for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-    //     var randomIndex = Math.floor(Math.random() * i);
-    //     var tempIndex = cardFrontClassList[i];
+    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * i);
+        var tempIndex = cardFrontClassList[i];
 
-    //     cardFrontClassList[i] = cardFrontClassList[randomIndex];
-    //     cardFrontClassList[randomIndex] = tempIndex;
+        cardFrontClassList[i] = cardFrontClassList[randomIndex];
+        cardFrontClassList[randomIndex] = tempIndex;
 
-    //     frontCards[i].classList.add(cardFrontClassList[i]);
-    // };
+        frontCards[i].classList.add(cardFrontClassList[i]);
+    };
 };
 ///////////////////////////////////////////////////////////////////
 
@@ -516,6 +516,10 @@ function addTotalGames() {
     document.getElementById("stage").firstElementChild.textContent = stage;
 };
 
+// function dragonFireTrigger () {
+    
+// }
+
 function handleClick(event) {
     if (event.target.className.indexOf("card-back") === -1) {
         return;
@@ -526,13 +530,28 @@ function handleClick(event) {
         secondCardClicked = event.target;
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
+        console.log("second card clicked")
         if (firstCardClass === secondCardClass) {
+            //swingSword Trigger
+            document.querySelector(".actionIcon").classList.remove("standby");
+            document.querySelector(".actionIcon").classList.add("swingSword");
+            setTimeout(function () {
+                document.querySelector(".actionIcon").classList.remove("swingSword");
+                document.querySelector(".actionIcon").classList.add("standby");
+            },1400); 
             matches++;
             addClicker();
             clearCardClicked();
             displayStats();
         } else {
-
+            //fireTrigger
+            document.querySelector(".actionIcon").classList.remove("standby");
+            document.querySelector(".actionIcon").classList.add("fire");
+            setTimeout(function () {
+                document.querySelector(".actionIcon").classList.remove("fire");
+                document.querySelector(".actionIcon").classList.add("standby");
+            },1400); 
+            //
             unhideCard();
             displayStats();
         }
@@ -540,6 +559,7 @@ function handleClick(event) {
         attempts++;
         firstCardClicked = event.target;
         firstCardClass = firstCardClicked.previousElementSibling.className;
+        console.log("first card clicked");
     }
 
     if (matches === maxMatches) {
