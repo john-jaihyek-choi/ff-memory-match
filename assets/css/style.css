@@ -6,7 +6,8 @@
 
 body {
    height: 97vh;
-   background-color: teal;
+   background-image: url(../images/background.jpg);
+   background-repeat: no-repeat;
  }
   
 .container {
@@ -72,7 +73,7 @@ body {
    font-size: 3em;
    text-align: center;
    font-weight: bold;
-   background-color: violet;
+   /* background-color: violet; */
  }
   
  .gameRow {
@@ -88,8 +89,8 @@ body {
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   flex-basis: 100%;
-   background-color: tomato;
+   flex-basis: 50%;
+   background-color: #130E0C;
    border-radius: 10px;
  }
   
@@ -99,12 +100,18 @@ body {
    align-items: center;
    border-radius: 10px;
    text-align: center;
-   background-color: whitesmoke;
+   font-size: 1.3em;
+   color: whitesmoke;
+   background-color: #130E0C;
  }
 
  .statBox:first-child {
    height: 30%;
    flex-basis: 100%;
+   background-image: url(../images/statbartop.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
  }
 
  .scoreHead {
@@ -117,6 +124,24 @@ body {
    flex-basis: calc(100%/3);
  }
 
+ .actionIconColumn {
+   height: 18%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/actiongif.gif),
+      url(../images/standbygif.gif),
+      url(../images/hp-bar-png-19.png);
+   background-size: contain,
+      contain,
+      contain;
+   background-repeat: no-repeat,
+      no-repeat,
+      no-repeat;
+   background-position: 130px -1px,
+      100px 8px,
+      left -40px;
+ }
+
 .cardColumn {
    height: 80%;
    display: flex;
@@ -124,7 +149,7 @@ body {
    justify-content: space-evenly;
    align-items: center;
    flex-basis: 100%;
-   background-color: thistle;
+   /* background-color: thistle; */
 }
   
 .card {
@@ -134,11 +159,39 @@ body {
    cursor: pointer;
 }
 
+.stage1Card {
+   width: 26%;
+   height: 46%;
+   position: relative;
+   cursor: pointer;
+}
+
+.stage2Card {
+   width: 23%;
+   height: 31%;
+   position: relative;
+   cursor: pointer;
+}
+
+.stage3Card {
+   width: 15%;
+   height: 30%;
+   position: relative;
+   cursor: pointer;
+}
+
+.stage4Card {
+   width: 15%;
+   height: 23%;
+   position: relative;
+   cursor: pointer;
+}
+
 .card:hover {
    border: 5px solid #55FF2B;
    margin: -5px;
    border-radius: 15px;
-   transform: scale(1.05);
+   transform: scale(1.1);
    transition: transform 0.25s;
 }
  
@@ -154,27 +207,34 @@ body {
 
 .sideBar {
    display: flex;
-   flex-basis: 19%;
+   flex-basis: 22%;
    flex-wrap: wrap;
-   background-color: yellowgreen;
+   /* background-color: yellowgreen; */
    height: 93%;
    border-radius: 10px;
-   margin-left: 1%;
+   /* margin-left: 1%; */
    align-self: center;
 }
 
 .utility {
    display: flex;
    flex-flow: column;
-   background-color: coral;
+   /* background-color: coral; */
    flex-basis: 100%;
    height: 49%;
    border-radius: 10px;
    align-self: flex-end;
 }
 
+.lowerSideBar {
+   background-image: url(../images/felyne-1.gif);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
 .itemBar {
-   background-color: cornflowerblue;
+   /* background-color: cornflowerblue; */
    
    margin: auto 0;
    height: 49%;
@@ -182,7 +242,9 @@ body {
 }
 
 .card-back {
-   background-image: url(../images/lfz-card.jpg);
+   background-image: url(../images/cardback.jpg);
+   background-color: black;
+   background-size: 80%;
 }
 
 .js-logo {
@@ -223,29 +285,43 @@ body {
 
 .modal-box {
    position: fixed;
-   display: flex;
+   display: wrap;
    flex-wrap: wrap;
-   width: 25%;
-   left: 15%;
-   left: 40%;
-   background-color: skyblue;
-   align-items: center;
+   width: 50%;
+   height: 40%;
+   left: 25%;
+   top: 25%;
    justify-content: center;
    border-radius: 10px;
+   background-image: url(../images/dialoguebox.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   text-align: center;
 }
 
 .modal-content {
+   position: absolute;
+   display: block;
+   align-items: center;
+   top: 42%;
+   left: 6%;
    font-size: 1.3em;
-   text-align: center;
-   margin: 2% auto;
 }
 
 .modal-button {
+   position: absolute;
+   display: block;
+   align-items: center;
+   top: 65%;
+   width: 100%;
+}
+
+.modal-button > button {
    width: 100px;
-   height: 30px;
-   margin: 5% auto;
-   font-weight: bold;
+   height: 50px;
    border-radius: 10px;
+   margin: 0 10%;
 }
 
 .hidden {
