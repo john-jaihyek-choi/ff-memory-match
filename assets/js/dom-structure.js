@@ -186,24 +186,24 @@ function stage1() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    //shuffle
-    var cardCount = document.getElementById("gameCards").childElementCount;
-    var frontCards = document.querySelectorAll(".card-front");
+    // //shuffle
+    // var cardCount = document.getElementById("gameCards").childElementCount;
+    // var frontCards = document.querySelectorAll(".card-front");
 
-    for (i = 0; i < cardCount; i++) {
-        frontCards[i].className = "";
-        frontCards[i].className += "card-front";
-    };
+    // for (i = 0; i < cardCount; i++) {
+    //     frontCards[i].className = "";
+    //     frontCards[i].className += "card-front";
+    // };
 
-    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-        var randomIndex = Math.floor(Math.random() * i);
-        var tempIndex = cardFrontClassList[i];
+    // for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+    //     var randomIndex = Math.floor(Math.random() * i);
+    //     var tempIndex = cardFrontClassList[i];
 
-        cardFrontClassList[i] = cardFrontClassList[randomIndex];
-        cardFrontClassList[randomIndex] = tempIndex;
+    //     cardFrontClassList[i] = cardFrontClassList[randomIndex];
+    //     cardFrontClassList[randomIndex] = tempIndex;
 
-        frontCards[i].classList.add(cardFrontClassList[i]);
-    };
+    //     frontCards[i].classList.add(cardFrontClassList[i]);
+    // };
 };
 
 ////6 x 2
@@ -515,10 +515,6 @@ function addTotalGames() {
     stage++;
     document.getElementById("stage").firstElementChild.textContent = stage;
 };
-
-// function dragonFireTrigger () {
-    
-// }
 
 function handleClick(event) {
     if (event.target.className.indexOf("card-back") === -1) {
