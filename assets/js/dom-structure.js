@@ -7,146 +7,148 @@ var attempts = 0;
 var item1;
 var item2;
 
-//////////dom structure///////////
-//header
-var headerRowClassList = [
-    "col-12"
-];
+initializeGame();
 
-var title = "";
+function initializeGame () {
+    //////////dom structure///////////
+    //header
+    var headerRowClassList = [
+        "col-12"
+    ];
 
-for (i = 0; i < headerRowClassList.length; i++) {
-    var headerRow = document.createElement("div");
-    headerRow.className = "headerRow " + headerRowClassList[i];
-    container.append(headerRow);
+    var title = "";
 
-    var headerRowText = document.createElement("header");
-    headerRowText.textContent = title;
-    headerRow.append(headerRowText);
-};
+    for (i = 0; i < headerRowClassList.length; i++) {
+        var headerRow = document.createElement("div");
+        headerRow.className = "headerRow " + headerRowClassList[i];
+        container.append(headerRow);
 
-//gameRow
-var gameRowClassList = [
-    "col-6",
-];
-for (i = 0; i < gameRowClassList.length; i++) {
-    var gameRow = document.createElement("div");
-    gameRow.className = "gameRow " + gameRowClassList[i];
-    container.append(gameRow);
-};
+        var headerRowText = document.createElement("header");
+        headerRowText.textContent = title;
+        headerRow.append(headerRowText);
+    };
 
-//statColumn
-var statColumnClassList = [
-    ""
-];
-for (i = 0; i < statColumnClassList.length; i++) {
-    var statColumn = document.createElement("aside");
-    statColumn.className = "statColumn " + statColumnClassList[i];
-    gameRow.append(statColumn);
-};
+    //gameRow
+    var gameRowClassList = [
+        "col-6",
+    ];
+    for (i = 0; i < gameRowClassList.length; i++) {
+        var gameRow = document.createElement("div");
+        gameRow.className = "gameRow " + gameRowClassList[i];
+        container.append(gameRow);
+    };
 
-//statBox
-var statBoxClassList = [
-    "",
-    "scoreHead",
-    "scoreHead",
-    "scoreHead",
-    "scoreCount",
-    "scoreCount",
-    "scoreCount"
-];
+    //statColumn
+    var statColumnClassList = [
+        ""
+    ];
+    for (i = 0; i < statColumnClassList.length; i++) {
+        var statColumn = document.createElement("aside");
+        statColumn.className = "statColumn " + statColumnClassList[i];
+        gameRow.append(statColumn);
+    };
 
-var statBoxIdList = [
-    "",
-    "",
-    "",
-    "",
-    "stage",
-    "attempts",
-    "accuracy"
-];
+    //statBox
+    var statBoxClassList = [
+        "",
+        "scoreHead",
+        "scoreHead",
+        "scoreHead",
+        "scoreCount",
+        "scoreCount",
+        "scoreCount"
+    ];
 
-var statBoxText = [
-    "Stats",
-    "Stage",
-    "Attempts",
-    "Accuracy",
-    "1",
-    "0",
-    "0"
-];
+    var statBoxIdList = [
+        "",
+        "",
+        "",
+        "",
+        "stage",
+        "attempts",
+        "accuracy"
+    ];
 
-for (i = 0; i < statBoxClassList.length; i++) {
-    var statBox = document.createElement("div");
-    statBox.className = "statBox " + statBoxClassList[i];
-    statBox.setAttribute("id", statBoxIdList[i]);
-    statColumn.append(statBox);
+    var statBoxText = [
+        "Stats",
+        "Stage",
+        "Attempts",
+        "Accuracy",
+        "1",
+        "0",
+        "0"
+    ];
 
-    var h4Element = document.createElement("h4");
-    h4Element.textContent = statBoxText[i];
-    statBox.append(h4Element);
-};
+    for (i = 0; i < statBoxClassList.length; i++) {
+        var statBox = document.createElement("div");
+        statBox.className = "statBox " + statBoxClassList[i];
+        statBox.setAttribute("id", statBoxIdList[i]);
+        statColumn.append(statBox);
 
-//actionIconColumn
-var actionIconColumnClassList = [
-    ""
-];
-for (i = 0; i < actionIconColumnClassList.length; i++) {
-    var actionIconColumn = document.createElement("aside");
-    actionIconColumn.className = "actionIcon standby " + actionIconColumnClassList[i];
-    gameRow.append(actionIconColumn);
-};
+        var h4Element = document.createElement("h4");
+        h4Element.textContent = statBoxText[i];
+        statBox.append(h4Element);
+    };
 
-//cardColumn
-var cardColumnClassList = [
-    ""
-];
+    //actionIconColumn
+    var actionIconColumnClassList = [
+        ""
+    ];
+    for (i = 0; i < actionIconColumnClassList.length; i++) {
+        var actionIconColumn = document.createElement("aside");
+        actionIconColumn.className = "actionIcon standby " + actionIconColumnClassList[i];
+        gameRow.append(actionIconColumn);
+    };
 
-var cardColumnIdList = [
-    "gameCards"
-];
+    //cardColumn
+    var cardColumnClassList = [
+        ""
+    ];
 
-for (i = 0; i < cardColumnClassList.length; i++) {
-    var cardColumn = document.createElement("main");
-    cardColumn.className = "cardColumn " + cardColumnClassList[i];
-    cardColumn.setAttribute("id", cardColumnIdList[i]);
-    gameRow.append(cardColumn);
-};
+    var cardColumnIdList = [
+        "gameCards"
+    ];
 
-//sideBar
-var sideBarClassList = [
-    "col-12"
-]
+    for (i = 0; i < cardColumnClassList.length; i++) {
+        var cardColumn = document.createElement("main");
+        cardColumn.className = "cardColumn " + cardColumnClassList[i];
+        cardColumn.setAttribute("id", cardColumnIdList[i]);
+        gameRow.append(cardColumn);
+    };
 
-for (i = 0; i < sideBarClassList.length; i++) {
-    var sideBar = document.createElement("div");
-    sideBar.className = "sideBar " + sideBarClassList[i];
-    container.append(sideBar);
+    //sideBar
+    var sideBarClassList = [
+        "col-12"
+    ]
 
-    var upperSideBar = document.createElement("div");
-    upperSideBar.className = "utility upperSideBar";
-    sideBar.append(upperSideBar);
+    for (i = 0; i < sideBarClassList.length; i++) {
+        var sideBar = document.createElement("div");
+        sideBar.className = "sideBar " + sideBarClassList[i];
+        container.append(sideBar);
 
-    var lowerSideBar = document.createElement("div");
-    lowerSideBar.className = "utility lowerSideBar";
-    sideBar.append(lowerSideBar);
-};
+        var upperSideBar = document.createElement("div");
+        upperSideBar.className = "utility upperSideBar";
+        sideBar.append(upperSideBar);
 
-//itemBar
-var itemBarClassList = [
-    "",
-    ""
-];
+        var lowerSideBar = document.createElement("div");
+        lowerSideBar.className = "utility lowerSideBar";
+        sideBar.append(lowerSideBar);
+    };
 
-for (i = 0; i < itemBarClassList.length; i++) {
-    var itemBar = document.createElement("div");
-    itemBar.className = "itemBar " + itemBarClassList[i];
-    upperSideBar.append(itemBar);
-};
+    //itemBar
+    var itemBarClassList = [
+        "",
+        ""
+    ];
 
-stage1();
+    for (i = 0; i < itemBarClassList.length; i++) {
+        var itemBar = document.createElement("div");
+        itemBar.className = "itemBar " + itemBarClassList[i];
+        upperSideBar.append(itemBar);
+    };
 
-//////////////////////////////////////////////////////
+    stage1();
+}
 
 /////////stage DOM //////////////////////////
 ////6 x 1
@@ -173,7 +175,7 @@ function stage1() {
     for (i = 0; i < cardClassList.length; i++) {
         var card = document.createElement("div")
         card.className = "card " + cardClassList[i];
-        cardColumn.append(card);
+        document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
         cardFront.className = "card-front " + cardFrontClassList[i];
@@ -243,7 +245,7 @@ function stage2() {
     for (i = 0; i < cardClassList.length; i++) {
         var card = document.createElement("div")
         card.className = "card " + cardClassList[i];
-        cardColumn.append(card);
+        document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
         cardFront.className = "card-front " + cardFrontClassList[i];
@@ -324,7 +326,7 @@ function stage3() {
     for (i = 0; i < cardClassList.length; i++) {
         var card = document.createElement("div")
         card.className = "card " + cardClassList[i];
-        cardColumn.append(card);
+        document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
         cardFront.className = "card-front " + cardFrontClassList[i];
@@ -417,7 +419,7 @@ function stage4() {
     for (i = 0; i < cardClassList.length; i++) {
         var card = document.createElement("div")
         card.className = "card " + cardClassList[i];
-        cardColumn.append(card);
+        document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
         cardFront.className = "card-front " + cardFrontClassList[i];
