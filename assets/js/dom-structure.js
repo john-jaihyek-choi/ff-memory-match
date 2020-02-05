@@ -4,49 +4,39 @@ var stage = 1;
 var matchPair = 2;
 var maxMatches = 3;
 var attempts = 0;
-var item1;
-var item2;
+var item1;// will add items selected in between stages
+var item2;// will add items selected in between stages
 
 initializeGame();
 
 function initializeGame () {
     //////////dom structure///////////
-    //header
-    var headerRowClassList = [
-        "col-12"
-    ];
+    
+    // header
+    var headerTitle = "";
+    var headerClass = "col-12";
 
-    var title = "";
+    var headerRow = document.createElement("div");
+    headerRow.className = "headerRow " + headerClass;
+    container.append(headerRow);
 
-    for (i = 0; i < headerRowClassList.length; i++) {
-        var headerRow = document.createElement("div");
-        headerRow.className = "headerRow " + headerRowClassList[i];
-        container.append(headerRow);
+    var headerRowText = document.createElement("header");
+    headerRowText.textContent = headerTitle;
+    headerRow.append(headerRowText);
 
-        var headerRowText = document.createElement("header");
-        headerRowText.textContent = title;
-        headerRow.append(headerRowText);
-    };
 
     //gameRow
-    var gameRowClassList = [
-        "col-6",
-    ];
-    for (i = 0; i < gameRowClassList.length; i++) {
-        var gameRow = document.createElement("div");
-        gameRow.className = "gameRow " + gameRowClassList[i];
-        container.append(gameRow);
-    };
+    var gameRowClass = "col-6"
+
+    var gameRow = document.createElement("div");
+    gameRow.className = "gameRow " + gameRowClass;
+    container.append(gameRow);
 
     //statColumn
-    var statColumnClassList = [
-        ""
-    ];
-    for (i = 0; i < statColumnClassList.length; i++) {
-        var statColumn = document.createElement("aside");
-        statColumn.className = "statColumn " + statColumnClassList[i];
-        gameRow.append(statColumn);
-    };
+    var statColumnClass = "";
+    var statColumn = document.createElement("aside");
+    statColumn.className = "statColumn " + statColumnClass;
+    gameRow.append(statColumn);
 
     //statBox
     var statBoxClassList = [
@@ -91,49 +81,35 @@ function initializeGame () {
     };
 
     //actionIconColumn
-    var actionIconColumnClassList = [
-        ""
-    ];
-    for (i = 0; i < actionIconColumnClassList.length; i++) {
-        var actionIconColumn = document.createElement("aside");
-        actionIconColumn.className = "actionIcon standby " + actionIconColumnClassList[i];
-        gameRow.append(actionIconColumn);
-    };
+    var actionIconColumnClass = "";
+    var actionIconColumn = document.createElement("aside");
+    actionIconColumn.className = "actionIcon standby " + actionIconColumnClass;
+    gameRow.append(actionIconColumn);
 
     //cardColumn
-    var cardColumnClassList = [
-        ""
-    ];
-
-    var cardColumnIdList = [
-        "gameCards"
-    ];
-
-    for (i = 0; i < cardColumnClassList.length; i++) {
-        var cardColumn = document.createElement("main");
-        cardColumn.className = "cardColumn " + cardColumnClassList[i];
-        cardColumn.setAttribute("id", cardColumnIdList[i]);
-        gameRow.append(cardColumn);
-    };
+    var cardColumnClass = "";
+    var cardColumnId = "gameCards";
+    
+    var cardColumn = document.createElement("main");
+    cardColumn.className = "cardColumn " + cardColumnClass;
+    cardColumn.setAttribute("id", cardColumnId);
+    gameRow.append(cardColumn);
 
     //sideBar
-    var sideBarClassList = [
-        "col-12"
-    ]
+    var sideBarClass = "col-12";
 
-    for (i = 0; i < sideBarClassList.length; i++) {
-        var sideBar = document.createElement("div");
-        sideBar.className = "sideBar " + sideBarClassList[i];
-        container.append(sideBar);
+    var sideBar = document.createElement("div");
+    sideBar.className = "sideBar " + sideBarClass;
+    container.append(sideBar);
 
-        var upperSideBar = document.createElement("div");
-        upperSideBar.className = "utility upperSideBar";
-        sideBar.append(upperSideBar);
+    var upperSideBar = document.createElement("div");
+    upperSideBar.className = "utility upperSideBar";
+    sideBar.append(upperSideBar);
 
-        var lowerSideBar = document.createElement("div");
-        lowerSideBar.className = "utility lowerSideBar";
-        sideBar.append(lowerSideBar);
-    };
+    var lowerSideBar = document.createElement("div");
+    lowerSideBar.className = "utility lowerSideBar";
+    sideBar.append(lowerSideBar);
+
 
     //itemBar
     var itemBarClassList = [
@@ -151,17 +127,30 @@ function initializeGame () {
 }
 
 /////////stage DOM //////////////////////////
+///////prototype//////////
+var stage1ClassArr = [
+    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+];
+var stage2ClassArr = [
+    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo"
+];
+var stage3ClassArr = [
+    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
+    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+];
+var stage4ClassArr = [
+    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
+    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo",
+    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+];
+
 ////6 x 1
 //card
-function stage1() {
-    var cardClassList = [
-        "stage1Card",
-        "stage1Card",
-        "stage1Card",
-        "stage1Card",
-        "stage1Card",
-        "stage1Card"
-    ];
+function stage1() { //make a single function which calls and creates dom depending on different stageArr
+    var cardClass = "stage1Card"
 
     var cardFrontClassList = [
         "js-logo",
@@ -172,9 +161,9 @@ function stage1() {
         "gitHub-logo",
     ];
 
-    for (i = 0; i < cardClassList.length; i++) {
+    for (i = 0; i < cardFrontClassList.length; i++) {
         var card = document.createElement("div")
-        card.className = "card " + cardClassList[i];
+        card.className = "card " + cardClass;
         document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
@@ -188,44 +177,14 @@ function stage1() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    // //shuffle
-    // var cardCount = document.getElementById("gameCards").childElementCount;
-    // var frontCards = document.querySelectorAll(".card-front");
-
-    // for (i = 0; i < cardCount; i++) {
-    //     frontCards[i].className = "";
-    //     frontCards[i].className += "card-front";
-    // };
-
-    // for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-    //     var randomIndex = Math.floor(Math.random() * i);
-    //     var tempIndex = cardFrontClassList[i];
-
-    //     cardFrontClassList[i] = cardFrontClassList[randomIndex];
-    //     cardFrontClassList[randomIndex] = tempIndex;
-
-    //     frontCards[i].classList.add(cardFrontClassList[i]);
-    // };
+    shuffle(cardFrontClassList);
 };
 
 ////6 x 2
 function stage2() {
     hideModalProceed();
     document.getElementById("gameCards").textContent = "";
-    var cardClassList = [
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card",
-        "stage2Card"
-    ];
+    var cardClass = "stage2Card"
 
     var cardFrontClassList = [
         "js-logo",
@@ -242,9 +201,9 @@ function stage2() {
         "react-logo"
     ];
 
-    for (i = 0; i < cardClassList.length; i++) {
+    for (i = 0; i < cardFrontClassList.length; i++) {
         var card = document.createElement("div")
-        card.className = "card " + cardClassList[i];
+        card.className = "card " + cardClass;
         document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
@@ -258,49 +217,13 @@ function stage2() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    //shuffle
-    var cardCount = document.getElementById("gameCards").childElementCount;
-    var frontCards = document.querySelectorAll(".card-front");
-
-    for (i = 0; i < cardCount; i++) {
-        frontCards[i].className = "";
-        frontCards[i].className += "card-front";
-    };
-
-    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-        var randomIndex = Math.floor(Math.random() * i);
-        var tempIndex = cardFrontClassList[i];
-
-        cardFrontClassList[i] = cardFrontClassList[randomIndex];
-        cardFrontClassList[randomIndex] = tempIndex;
-
-        frontCards[i].classList.add(cardFrontClassList[i]);
-    };
+    shuffle(cardFrontClassList);
 };
 
 function stage3() {
     hideModalProceed();
     document.getElementById("gameCards").textContent = "";
-    var cardClassList = [
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card",
-        "stage3Card"
-    ];
+    var cardClass = "stage3Card";
 
     var cardFrontClassList = [
         "js-logo",
@@ -323,9 +246,9 @@ function stage3() {
         "docker-logo"
     ];
 
-    for (i = 0; i < cardClassList.length; i++) {
+    for (i = 0; i < cardFrontClassList.length; i++) {
         var card = document.createElement("div")
-        card.className = "card " + cardClassList[i];
+        card.className = "card " + cardClass;
         document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
@@ -339,55 +262,13 @@ function stage3() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    //shuffle
-    var cardCount = document.getElementById("gameCards").childElementCount;
-    var frontCards = document.querySelectorAll(".card-front");
-
-    for (i = 0; i < cardCount; i++) {
-        frontCards[i].className = "";
-        frontCards[i].className += "card-front";
-    };
-
-    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-        var randomIndex = Math.floor(Math.random() * i);
-        var tempIndex = cardFrontClassList[i];
-
-        cardFrontClassList[i] = cardFrontClassList[randomIndex];
-        cardFrontClassList[randomIndex] = tempIndex;
-
-        frontCards[i].classList.add(cardFrontClassList[i]);
-    };
+    shuffle(cardFrontClassList);
 };
 
 function stage4() {
     hideModalProceed();
     document.getElementById("gameCards").textContent = "";
-    var cardClassList = [
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card",
-        "stage4Card"
-    ];
+    var cardClass = "stage4Card";
 
     var cardFrontClassList = [
         "js-logo",
@@ -416,9 +297,9 @@ function stage4() {
         "docker-logo"
     ];
 
-    for (i = 0; i < cardClassList.length; i++) {
+    for (i = 0; i < cardFrontClassList.length; i++) {
         var card = document.createElement("div")
-        card.className = "card " + cardClassList[i];
+        card.className = "card " + cardClass;
         document.querySelector(".cardColumn").append(card);
 
         var cardFront = document.createElement("div");
@@ -432,24 +313,7 @@ function stage4() {
 
     maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 
-    //shuffle
-    var cardCount = document.getElementById("gameCards").childElementCount;
-    var frontCards = document.querySelectorAll(".card-front");
-
-    for (i = 0; i < cardCount; i++) {
-        frontCards[i].className = "";
-        frontCards[i].className += "card-front";
-    };
-
-    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
-        var randomIndex = Math.floor(Math.random() * i);
-        var tempIndex = cardFrontClassList[i];
-
-        cardFrontClassList[i] = cardFrontClassList[randomIndex];
-        cardFrontClassList[randomIndex] = tempIndex;
-
-        frontCards[i].classList.add(cardFrontClassList[i]);
-    };
+    shuffle(cardFrontClassList);
 };
 ///////////////////////////////////////////////////////////////////
 
@@ -460,7 +324,7 @@ var firstCardClass;
 var secondCardClicked;
 var secondCardClass;
 
-var gameCardDiv = document.getElementById("gameCards");
+var gameCardDiv = document.getElementById("gameCards"); //make it available for other class
 
 // var maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
 var matches = 0;
@@ -518,6 +382,27 @@ function addTotalGames() {
     document.getElementById("stage").firstElementChild.textContent = stage;
 };
 
+//shuffle
+function shuffle (cardFrontClassList) {
+    var cardCount = document.getElementById("gameCards").childElementCount;
+    var frontCards = document.querySelectorAll(".card-front");
+
+    for (i = 0; i < cardCount; i++) {
+        frontCards[i].className = "";
+        frontCards[i].className += "card-front";
+    };
+
+    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+        var randomIndex = Math.floor(Math.random() * i);
+        var tempIndex = cardFrontClassList[i];
+
+        cardFrontClassList[i] = cardFrontClassList[randomIndex];
+        cardFrontClassList[randomIndex] = tempIndex;
+
+        frontCards[i].classList.add(cardFrontClassList[i]);
+    };
+}
+
 function handleClick(event) {
     if (event.target.className.indexOf("card-back") === -1) {
         return;
@@ -530,7 +415,7 @@ function handleClick(event) {
         removeClicker();
         console.log("second card clicked")
         if (firstCardClass === secondCardClass) {
-            //swingSword Trigger
+            //swingSword Trigger  //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
             document.querySelector(".actionIcon").classList.add("swingSword");
             setTimeout(function () {
@@ -542,7 +427,7 @@ function handleClick(event) {
             clearCardClicked();
             displayStats();
         } else {
-            //fireTrigger
+            //fireTrigger   //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
             document.querySelector(".actionIcon").classList.add("fire");
             setTimeout(function () {
@@ -572,6 +457,13 @@ addClicker();
 ////////////////////////////////////////////////
 
 ///////// Stage Modal///////////////////////////////////////
+//prototype
+stage1ModalArr = [];
+stage2ModalArr = [];
+stage3ModalArr = [];
+stage4ModalArr = [];
+stage5ModalArr = [];
+
 //stage1
 function showModal() {
     matches = 0;
