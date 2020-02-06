@@ -4,10 +4,45 @@ var stage = 1;
 var matchPair = 2;
 var maxMatches = 3;
 var attempts = 0;
+var matches = 0;
 var item1;// will add items selected in between stages
 var item2;// will add items selected in between stages
+var firstCardClicked;
+var firstCardClass;
+var secondCardClicked;
+var secondCardClass;
+
+//stage class objects
+var stageImg = {
+    //3 x 2
+    1: [
+        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo"
+    ],
+    //6 x 2
+    2: [
+        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo"
+    ],
+    //6 x 3
+    3: [
+        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
+        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+    ],
+    //6 x 4
+    4: [
+        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
+        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
+        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo",
+        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+    ]
+};
 
 initializeGame();
+
+//must come after the game is initialized
+var gameCardDiv = document.getElementById("gameCards");
+
 
 function initializeGame () {
     //////////dom structure///////////
@@ -123,215 +158,44 @@ function initializeGame () {
         upperSideBar.append(itemBar);
     };
 
-    stage1();
+    stageCall();
 }
 
 /////////stage DOM //////////////////////////
 ///////prototype//////////
-var stage1ClassArr = [
-    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-];
-var stage2ClassArr = [
-    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo"
-];
-var stage3ClassArr = [
-    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
-    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
-];
-var stage4ClassArr = [
-    "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-    "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
-    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo",
-    "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
-];
+function stageCall () {
+    var currentStage = stage;
 
-////6 x 1
-//card
-function stage1() { //make a single function which calls and creates dom depending on different stageArr
-    var cardClass = "stage1Card"
+    repopulateCardColumn();
 
-    var cardFrontClassList = [
-        "js-logo",
-        "js-logo",
-        "html-logo",
-        "html-logo",
-        "gitHub-logo",
-        "gitHub-logo",
-    ];
-
-    for (i = 0; i < cardFrontClassList.length; i++) {
+    for (i = 0; i < stageImg[currentStage].length; i++) {
+        //create card which goes into cardColumn
         var card = document.createElement("div")
-        card.className = "card " + cardClass;
+        card.className = "card " + ("stage"+currentStage+"Card");
         document.querySelector(".cardColumn").append(card);
 
+        //create cardFront which goes into card created above
         var cardFront = document.createElement("div");
-        cardFront.className = "card-front " + cardFrontClassList[i];
+        cardFront.className = "card-front " + stageImg[currentStage][i];
         card.append(cardFront);
 
+        //create cardBack which goes into card created above
         var cardBack = document.createElement("div");
         cardBack.className = "card-back "
         card.append(cardBack);
     };
 
-    maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
+    //counts possible maxMatches for each stage
+    maxMatches = stageImg[currentStage].length / matchPair;
 
-    shuffle(cardFrontClassList);
-};
-
-////6 x 2
-function stage2() {
-    hideModalProceed();
-    document.getElementById("gameCards").textContent = "";
-    var cardClass = "stage2Card"
-
-    var cardFrontClassList = [
-        "js-logo",
-        "js-logo",
-        "html-logo",
-        "html-logo",
-        "gitHub-logo",
-        "gitHub-logo",
-        "mysql-logo",
-        "mysql-logo",
-        "php-logo",
-        "php-logo",
-        "react-logo",
-        "react-logo"
-    ];
-
-    for (i = 0; i < cardFrontClassList.length; i++) {
-        var card = document.createElement("div")
-        card.className = "card " + cardClass;
-        document.querySelector(".cardColumn").append(card);
-
-        var cardFront = document.createElement("div");
-        cardFront.className = "card-front " + cardFrontClassList[i];
-        card.append(cardFront);
-
-        var cardBack = document.createElement("div");
-        cardBack.className = "card-back "
-        card.append(cardBack);
-    };
-
-    maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
-
-    shuffle(cardFrontClassList);
-};
-
-function stage3() {
-    hideModalProceed();
-    document.getElementById("gameCards").textContent = "";
-    var cardClass = "stage3Card";
-
-    var cardFrontClassList = [
-        "js-logo",
-        "js-logo",
-        "html-logo",
-        "html-logo",
-        "gitHub-logo",
-        "gitHub-logo",
-        "mysql-logo",
-        "mysql-logo",
-        "php-logo",
-        "php-logo",
-        "react-logo",
-        "react-logo",
-        "node-logo",
-        "node-logo",
-        "css-logo",
-        "css-logo",
-        "docker-logo",
-        "docker-logo"
-    ];
-
-    for (i = 0; i < cardFrontClassList.length; i++) {
-        var card = document.createElement("div")
-        card.className = "card " + cardClass;
-        document.querySelector(".cardColumn").append(card);
-
-        var cardFront = document.createElement("div");
-        cardFront.className = "card-front " + cardFrontClassList[i];
-        card.append(cardFront);
-
-        var cardBack = document.createElement("div");
-        cardBack.className = "card-back "
-        card.append(cardBack);
-    };
-
-    maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
-
-    shuffle(cardFrontClassList);
-};
-
-function stage4() {
-    hideModalProceed();
-    document.getElementById("gameCards").textContent = "";
-    var cardClass = "stage4Card";
-
-    var cardFrontClassList = [
-        "js-logo",
-        "js-logo",
-        "html-logo",
-        "html-logo",
-        "gitHub-logo",
-        "gitHub-logo",
-        "mysql-logo",
-        "mysql-logo",
-        "php-logo",
-        "php-logo",
-        "react-logo",
-        "react-logo",
-        "node-logo",
-        "node-logo",
-        "css-logo",
-        "css-logo",
-        "docker-logo",
-        "docker-logo",
-        "node-logo",
-        "node-logo",
-        "css-logo",
-        "css-logo",
-        "docker-logo",
-        "docker-logo"
-    ];
-
-    for (i = 0; i < cardFrontClassList.length; i++) {
-        var card = document.createElement("div")
-        card.className = "card " + cardClass;
-        document.querySelector(".cardColumn").append(card);
-
-        var cardFront = document.createElement("div");
-        cardFront.className = "card-front " + cardFrontClassList[i];
-        card.append(cardFront);
-
-        var cardBack = document.createElement("div");
-        cardBack.className = "card-back "
-        card.append(cardBack);
-    };
-
-    maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
-
-    shuffle(cardFrontClassList);
-};
+    //shuffles cards at the start of each stage
+    shuffle(stageImg[currentStage]);
+    
+    matches = 0;
+}
 ///////////////////////////////////////////////////////////////////
 
 /////////////game function///////////////////////
-var firstCardClicked;
-var firstCardClass;
-
-var secondCardClicked;
-var secondCardClass;
-
-var gameCardDiv = document.getElementById("gameCards"); //make it available for other class
-
-// var maxMatches = document.getElementById("gameCards").childElementCount / matchPair;
-var matches = 0;
-
-attempts = 0;
-// var stage = 0;
-
 function addClicker() {
     gameCardDiv.addEventListener("click", handleClick);
 };
@@ -355,7 +219,6 @@ function clearCardClicked() {
 };
 
 function restartGame() {
-    // resetStats();
     gameCardDiv.removeEventListener("click", hideModalRestart);
     clearCardClicked();
 }
@@ -365,13 +228,6 @@ function displayStats() {
     document.getElementById("attempts").firstElementChild.textContent = attempts;
     document.getElementById("accuracy").firstElementChild.textContent = calculateAccuracy(attempts, matches);
 };
-
-// function resetStats () {
-//     matches = 0;
-//     attempts = 0;
-//     document.getElementById("attempts").firstElementChild.textContent = attempts;
-//     document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
-// }
 
 function calculateAccuracy(attempts, matches) {
     return (matches / attempts * 100).toFixed(2) + "%";
@@ -383,7 +239,7 @@ function addTotalGames() {
 };
 
 //shuffle
-function shuffle (cardFrontClassList) {
+function shuffle (stageImgLength) {
     var cardCount = document.getElementById("gameCards").childElementCount;
     var frontCards = document.querySelectorAll(".card-front");
 
@@ -392,28 +248,36 @@ function shuffle (cardFrontClassList) {
         frontCards[i].className += "card-front";
     };
 
-    for (i = cardFrontClassList.length - 1; i >= 0; i--) {
+    for (i = stageImgLength.length - 1; i >= 0; i--) {
         var randomIndex = Math.floor(Math.random() * i);
-        var tempIndex = cardFrontClassList[i];
+        var tempIndex = stageImgLength[i];
 
-        cardFrontClassList[i] = cardFrontClassList[randomIndex];
-        cardFrontClassList[randomIndex] = tempIndex;
+        stageImgLength[i] = stageImgLength[randomIndex];
+        stageImgLength[randomIndex] = tempIndex;
 
-        frontCards[i].classList.add(cardFrontClassList[i]);
+        frontCards[i].classList.add(stageImgLength[i]);
     };
 }
+
+//clean out all existing cards
+function repopulateCardColumn () {
+    var cardColumn = document.querySelector(".cardColumn");
+
+    while (cardColumn.firstChild) {
+        cardColumn.removeChild(cardColumn.firstChild);
+    };
+};
 
 function handleClick(event) {
     if (event.target.className.indexOf("card-back") === -1) {
         return;
-    }
+    };
     event.target.classList.add("hidden");
 
     if (firstCardClicked) {
         secondCardClicked = event.target;
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
-        console.log("second card clicked")
         if (firstCardClass === secondCardClass) {
             //swingSword Trigger  //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
@@ -442,7 +306,6 @@ function handleClick(event) {
         attempts++;
         firstCardClicked = event.target;
         firstCardClass = firstCardClicked.previousElementSibling.className;
-        console.log("first card clicked");
     }
 
     if (matches === maxMatches) {
@@ -452,17 +315,40 @@ function handleClick(event) {
         addTotalGames();
     }
 }
-
-addClicker();
 ////////////////////////////////////////////////
 
 ///////// Stage Modal///////////////////////////////////////
 //prototype
-stage1ModalArr = [];
-stage2ModalArr = [];
-stage3ModalArr = [];
-stage4ModalArr = [];
-stage5ModalArr = [];
+var stageModal = {
+    1: {
+        statement1: "Congratulations",
+        statement2: "You have successfully completed stage " + stage,
+    },
+    2: {
+        statement1: "Congratulations",
+        statement2: "You have successfully completed stage " + stage,
+    },
+    3: {
+        statement1: "Congratulations",
+        statement2: "You have successfully completed stage " + stage,
+    },
+    4: {
+        statement1: "Congratulations",
+        statement2: "You have successfully completed stage " + stage,
+    },
+}
+
+function stageModalCall () {
+    var modalBox = document.createElement("div");
+    container.appendChild(modalBox);
+    modalBox.className = "modal-box";
+
+    for (i = 0; i < stageModal[stage].length; i++) {
+        
+
+
+    }
+}
 
 //stage1
 function showModal() {
@@ -641,3 +527,5 @@ function hideModalProceed() {
         backCards[i].className += "card-back";
     }
 };
+
+addClicker();
