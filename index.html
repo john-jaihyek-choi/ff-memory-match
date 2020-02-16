@@ -8,40 +8,40 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-   <div class="container">
-       <div class="col-12 row headerRow">
-           <header>LFZ Memory Match</header>
-       </div>
-       <div class="col-12 row gameRow">
-           <aside class="col-2 statColumn">
-               <div class="statBox">
-                   <h4>Stats</h4>
-               </div>
-               <div class="statBox">
-                   <h4>Games Played</h4>
-               </div>
-               <div class="statBox" id="gamesPlayed">
-                   <h4>0</h4>
-               </div>
-               <div class="statBox">
-                   <h4>Attempts</h4>
-               </div>
-               <div class="statBox" id="attempts">
-                   <h4>0</h4>
-               </div>
-               <div class="statBox">
-                   <h4>Accuracy</h4>
-               </div>
-               <div class="statBox" id="accuracy">
-                   <h4>0</h4>
-               </div>
-           </aside>
-           <main class="col-10 cardColumn" id="gameCards">
-               <div class="col-2 card">
-                   <div class="card-front js-logo"></div>
-                   <div class="card-back"></div>
-               </div>
-               <div class="col-2 card">
+   <!-- <div class="container">
+        <div class="col-12 row headerRow">
+            <header>My Memory Match</header>
+        </div>
+        <div class="col-12 row gameRow">
+            <aside class="statColumn">
+                <div class="statBox">
+                    <h4>Stats</h4>
+                </div>
+                <div class="statBox scoreHead">
+                    <h4>Games Played</h4>
+                </div>
+                <div class="statBox scoreHead">
+                    <h4>Attempts</h4>
+                </div>
+                <div class="statBox scoreHead">
+                    <h4>Accuracy</h4>
+                </div>
+                <div class="statBox scoreCount" id="gamesPlayed">
+                    <h4>0</h4>
+                </div>
+                <div class="statBox scoreCount" id="attempts">
+                    <h4>0</h4>
+                </div>
+                <div class="statBox scoreCount" id="accuracy">
+                    <h4>0</h4>
+                </div>
+            </aside>
+            <main class="cardColumn" id="gameCards">
+                <div class="col-2 card">
+                    <div class="card-front js-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
                     <div class="card-front js-logo"></div>
                     <div class="card-back"></div>
                 </div>
@@ -50,69 +50,73 @@
                     <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
-                     <div class="card-front html-logo"></div>
-                     <div class="card-back"></div>
+                        <div class="card-front html-logo"></div>
+                        <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
                     <div class="card-front gitHub-logo"></div>
                     <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
-                     <div class="card-front gitHub-logo"></div>
-                     <div class="card-back"></div>
+                        <div class="card-front gitHub-logo"></div>
+                        <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
                     <div class="card-front mysql-logo"></div>
                     <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
-                     <div class="card-front mysql-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                     <div class="card-front php-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                      <div class="card-front php-logo"></div>
-                      <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                     <div class="card-front react-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                      <div class="card-front react-logo"></div>
-                      <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
+                    <div class="card-front mysql-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front php-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front php-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front react-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front react-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                    <div class="col-2 card">
                     <div class="card-front node-logo"></div>
                     <div class="card-back"></div>
                 </div>
                 <div class="col-2 card">
-                     <div class="card-front node-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                     <div class="card-front css-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                      <div class="card-front css-logo"></div>
-                      <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                     <div class="card-front docker-logo"></div>
-                     <div class="card-back"></div>
-                 </div>
-                 <div class="col-2 card">
-                      <div class="card-front docker-logo"></div>
-                      <div class="card-back"></div>
-                 </div>
-           </main>
-       </div>
+                    <div class="card-front node-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front css-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front css-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front docker-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="col-2 card">
+                    <div class="card-front docker-logo"></div>
+                    <div class="card-back"></div>
+                </div>
+            </main>
+        </div>
+        <div class="col-12 sideBar">
+            <div class="utility upperSideBar"></div>
+            <div class="utility lowerSideBar"></div>
+        </div>
    </div>
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-   <script src="assets/js/script.js"></script>
+   <script src="assets/js/script.js"></script> -->
 </body>
 </html>
