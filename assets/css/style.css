@@ -3,10 +3,86 @@
    padding: 0;
 }
 
-body {
-   height: 97vh;
-   background-image: url(../images/background.jpg);
+.startPage {
+   height: 100vh;
+   background-image: url(../images/startGameBackground.jpg);
+   background-size: cover;
    background-repeat: no-repeat;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.felyneSelect {
+   display: flex;
+   flex-wrap: wrap;
+   height: 60%;
+}
+
+.felyneCard {
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 10px;
+   flex-basis: 28%;
+   margin: 0 auto;
+   height: 45%;
+}
+
+.felyneCard:hover {
+   border: 5px solid #55FF2B;
+   /* margin: -5px; */
+   border-radius: 10px;
+   transform: scale(1.05);
+   transition: transform 0.25s;
+   cursor: pointer;
+}
+
+.header {
+   display: flex;
+   flex-wrap: wrap;
+   flex-basis: 100%;
+   margin: 2% auto;
+   height: 25%;
+   align-content: center;
+}
+
+.headerContent {
+   background-image: url(../images/startPageLogo.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 100%;
+   /* margin-top: 5%; */
+}
+
+.headerIntro {
+   text-align: center;
+   font-family: MHFont;
+   font-size: 1.5rem;
+   color: rgba(255, 255, 255, 0.886);
+   text-shadow: 5px 5px 8px black;
+}
+
+body {
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .stage1Background {
+   background-image: url(../images/stage1background.jpg);
+ }
+
+ .stage2Background {
+   background-image: url(../images/stage2Background.jpg);
+ }
+
+ .stage3Background {
+   background-image: url(../images/stage3Background.png);
+ }
+
+ .stage4Background {
+   background-image: url(../images/stage4background.jpg);
  }
   
 .container {
@@ -72,7 +148,6 @@ body {
    font-size: 3em;
    text-align: center;
    font-weight: bold;
-   /* background-color: violet; */
  }
   
  .gameRow {
@@ -254,7 +329,7 @@ body {
    flex-basis: 22%;
    flex-wrap: wrap;
    /* background-color: yellowgreen; */
-   height: 93%;
+   height: 90%;
    border-radius: 10px;
    /* margin-left: 1%; */
    align-self: center;
@@ -271,15 +346,37 @@ body {
 }
 
 .lowerSideBar {
-   background-image: url(../images/felyne-1.gif);
+   /* background-image: url(../images/felyne-1.gif); */
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
 }
 
+.felyne1 {
+   background-image: url(../images/felyne-1.gif);
+}
+
+.felyne2 {
+   background-image: url(../images/felyne-2.webp);
+}
+
+.felyne3 {
+   background-image: url(../images/felyne-3.webp);
+}
+
+.felyne4 {
+   background-image: url(../images/felyne-4.webp);
+}
+
+.felyne5 {
+   background-image: url(../images/felyne-5.webp);
+}
+
+.felyne6 {
+   background-image: url(../images/felyne-6.webp);
+}
+
 .itemBar {
-   /* background-color: cornflowerblue; */
-   
    margin: auto 0;
    height: 49%;
    border-radius: 10px;
@@ -357,20 +454,11 @@ body {
    margin-top: -30%;
    margin-bottom: -33%;
 }
-/* .modal-content {
-   display: block;
-   
-}
-
-.modal-button {
-   display: block;
-} */
 
 .modal-button > button {
    width: 100px;
    height: 50px;
    border-radius: 10px;
-   /* margin: 0 10%; */
 }
 
 .hidden {

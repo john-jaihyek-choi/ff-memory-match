@@ -5,12 +5,13 @@ var matchPair = 2;
 var maxMatches = 3;
 var attempts = 0;
 var matches = 0;
-var item1;// will add items selected in between stages
-var item2;// will add items selected in between stages
+// var item1;// will add items selected in between stages
+// var item2;// will add items selected in between stages
 var firstCardClicked;
 var firstCardClass;
 var secondCardClicked;
 var secondCardClass;
+var felyne = null;
 
 //stage class objects
 var stageImg = {
@@ -38,7 +39,14 @@ var stageImg = {
     ]
 };
 
+//event listener
+for (var i = 0; i < document.querySelectorAll(".felyneCard").length; i++) {
+    document.querySelectorAll(".felyneCard")[i].addEventListener("click", startGame);
+    document.querySelectorAll(".felyneCard")[i].addEventListener("click", felyneSelect);
+} 
+
 initializeGame();
+stageCall();
 
 //must come after the game is initialized
 var gameCardDiv = document.getElementById("gameCards");
@@ -157,8 +165,6 @@ function initializeGame () {
         itemBar.className = "itemBar " + itemBarClassList[i];
         upperSideBar.append(itemBar);
     };
-
-    stageCall();
 }
 
 /////////stage DOM //////////////////////////
@@ -185,11 +191,15 @@ function stageCall () {
         card.append(cardBack);
     };
 
+    
+    document.querySelector("body").className = "";
+    document.querySelector("body").className = "stage" + stage + "Background";
+
     //counts possible maxMatches for each stage
     maxMatches = stageImg[currentStage].length / matchPair;
 
     //shuffles cards at the start of each stage
-    shuffle(stageImg[currentStage]);
+    // shuffle(stageImg[currentStage]);
     
     matches = 0;
 }
@@ -353,6 +363,7 @@ function stageModalCall () {
 //stage1
 function showModal() {
     matches = 0;
+    removeClicker();
     switch (stage) {
         case 1:
             var modalBox = document.createElement("div");
@@ -389,7 +400,8 @@ function showModal() {
 
             document.querySelector(".modal-box").classList.remove("hidden");
             document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stage2);
+            document.querySelector("button.nextStage").addEventListener("click", stageCall);
+            document.querySelector("button.nextStage").addEventListener("click", addClicker);
             break;
         case 2:
             var modalBox = document.createElement("div");
@@ -426,7 +438,8 @@ function showModal() {
 
             document.querySelector(".modal-box").classList.remove("hidden");
             document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stage3);
+            document.querySelector("button.nextStage").addEventListener("click", stageCall);
+            document.querySelector("button.nextStage").addEventListener("click", addClicker);
             break;
         case 3:
             var modalBox = document.createElement("div");
@@ -463,7 +476,8 @@ function showModal() {
 
             document.querySelector(".modal-box").classList.remove("hidden");
             document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stage4);
+            document.querySelector("button.nextStage").addEventListener("click", stageCall);
+            document.querySelector("button.nextStage").addEventListener("click", addClicker);
             break;
         case 4:
             var modalBox = document.createElement("div");
@@ -500,7 +514,8 @@ function showModal() {
 
             document.querySelector(".modal-box").classList.remove("hidden");
             document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stage5);
+            document.querySelector("button.nextStage").addEventListener("click", stageCall);
+            document.querySelector("button.nextStage").addEventListener("click", addClicker);
             break;
         default:
             break;
@@ -514,7 +529,8 @@ function hideModalRestart() {
     document.getElementById("stage").firstElementChild.textContent = stage;
     document.getElementById("attempts").firstElementChild.textContent = 0;
     document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
-    stage1();// this will later lead to the very first page of the website
+    stageCall();// this will later lead to the very first page of the website
+    addClicker();
 };
 
 function hideModalProceed() {
@@ -527,5 +543,20 @@ function hideModalProceed() {
         backCards[i].className += "card-back";
     }
 };
+
+function startGame() {
+    hideStartModal();
+}
+
+function hideStartModal () {
+    document.querySelector(".startPage").className = "startPage hidden";
+    document.querySelector(".container").classList.toggle("hidden");
+}
+
+function felyneSelect(event) {
+    felyne = event.currentTarget.classList[event.currentTarget.classList.length - 1];
+    document.querySelector(".lowerSideBar").className = "utility lowerSideBar";
+    document.querySelector(".lowerSideBar").classList.add(felyne);
+}
 
 addClicker();
