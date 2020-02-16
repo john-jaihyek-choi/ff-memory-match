@@ -187,18 +187,10 @@ body {
    background-repeat: no-repeat;
    background-position: center;
  }
-<<<<<<< HEAD
 
  .scoreHead {
    height: 35%;
    flex-basis: calc(100%/3);
-=======
-  
- .card {
-    width: 16%;
-    height: 30%;
-    position: relative;
->>>>>>> master
  }
 
  .scoreCount {
@@ -434,7 +426,6 @@ body {
 
 .modal-box {
    position: fixed;
-<<<<<<< HEAD
    display: wrap;
    flex-wrap: wrap;
    width: 50%;
@@ -442,16 +433,6 @@ body {
    left: 25%;
    top: 25%;
    justify-content: center;
-=======
-   display: flex;
-   flex-wrap: wrap;
-   height: 50vh;
-   width: 25%;
-   top: 15%;
-   left: 40%;
-   background-color: skyblue;
-   justify-content: space-around;
->>>>>>> master
    align-items: center;
    border-radius: 10px;
    background-image: url(../images/dialoguebox.png);
@@ -481,15 +462,5 @@ body {
 }
 
 .hidden {
-<<<<<<< HEAD
    display: none;
-=======
-    display: none;
-}
-
-.modal-button {
-   width: 200px;
-   height: 100px;
-   font-size: 2em;
->>>>>>> master
 }
