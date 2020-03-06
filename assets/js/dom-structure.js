@@ -5,8 +5,6 @@ var matchPair = 2;
 var maxMatches = 3;
 var attempts = 0;
 var matches = 0;
-// var item1;// will add items selected in between stages
-// var item2;// will add items selected in between stages
 var firstCardClicked;
 var firstCardClass;
 var secondCardClicked;
@@ -17,25 +15,23 @@ var felyne = null;
 var stageImg = {
     //3 x 2
     1: [
-        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo"
+        "tzitziYaKu","tzitziYaKu","kulu", "kulu", "pukeiPukei", "pukeiPukei"
     ],
     //6 x 2
     2: [
-        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo"
+        "barioth", "barioth", "diablos", "diablos", "legiana", "legiana",
+        "paolumu", "paolumu", "radobaan", "radobaan", "tobiKadachi", "tobiKadachi"
     ],
     //6 x 3
     3: [
-        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
-        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+        "azurerath", "azurerath", "bazel", "bazel", "jyuratodus", "jyuratodus", "viperTobi",  "viperTobi",
+        "anjanath", "anjanath", "odogaron", "odogaron", "rathalos", "rathalos", "teostra", "teostra", "zorah", "zorah"
     ],
     //6 x 4
     4: [
-        "js-logo","js-logo","html-logo","html-logo","gitHub-logo","gitHub-logo",
-        "mysql-logo","mysql-logo","php-logo","php-logo","react-logo","react-logo",
-        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo",
-        "node-logo","node-logo","css-logo","css-logo","docker-logo","docker-logo"
+        "behemoth", "behemoth", "kulveTarroth", "kulveTarroth", "ebonyOdogaron", "ebonyOdogaron", "kirin", "kirin", "kushala", "kushala",
+        "namielle",  "namielle", "nargacuga", "nargacuga", "nergigante", "nergigante", "tigrex", "tigrex", "xeno", "xeno", 
+        "yianGaruga", "yianGaruga", "zinogre","zinogre"
     ]
 };
 
@@ -46,7 +42,7 @@ for (var i = 0; i < document.querySelectorAll(".felyneCard").length; i++) {
 } 
 
 initializeGame();
-stageCall();
+stageCall(stage);
 
 //must come after the game is initialized
 var gameCardDiv = document.getElementById("gameCards");
@@ -169,10 +165,15 @@ function initializeGame () {
 
 /////////stage DOM //////////////////////////
 ///////prototype//////////
-function stageCall () {
-    var currentStage = stage;
-
+function stageCall (currentStage) {
+    // var currentStage = stage;
+    currentStage = stage
     repopulateCardColumn();
+
+    if(currentStage > 1) {
+        document.getElementById("gameCards").textContent = "";
+        document.querySelector(".container").removeChild(document.querySelector(".modal-box"));
+    }
 
     for (i = 0; i < stageImg[currentStage].length; i++) {
         //create card which goes into cardColumn
@@ -202,6 +203,7 @@ function stageCall () {
     // shuffle(stageImg[currentStage]);
     
     matches = 0;
+    
 }
 ///////////////////////////////////////////////////////////////////
 
@@ -348,18 +350,6 @@ var stageModal = {
     },
 }
 
-function stageModalCall () {
-    var modalBox = document.createElement("div");
-    container.appendChild(modalBox);
-    modalBox.className = "modal-box";
-
-    for (i = 0; i < stageModal[stage].length; i++) {
-        
-
-
-    }
-}
-
 //stage1
 function showModal() {
     matches = 0;
@@ -413,12 +403,12 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage II";
+            modalContent1.textContent = "Congratulations! You have completed Stage II. Would you like to proceed to the next stage?";
             modalDiv.appendChild(modalContent1);
 
-            var modalContent2 = document.createElement("p");
-            modalContent2.textContent = "Would you like to proceed to the next stage?";
-            modalDiv.appendChild(modalContent2);
+            // var modalContent2 = document.createElement("p");
+            // modalContent2.textContent = "Would you like to proceed to the next stage?";
+            // modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
@@ -451,12 +441,12 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage III";
+            modalContent1.textContent = "Congratulations! You have completed Stage III. Would you like to proceed to the final stage?";
             modalDiv.appendChild(modalContent1);
 
-            var modalContent2 = document.createElement("p");
-            modalContent2.textContent = "Would you like to proceed to the next stage?";
-            modalDiv.appendChild(modalContent2);
+            // var modalContent2 = document.createElement("p");
+            // modalContent2.textContent = "Would you like to proceed to the next stage?";
+            // modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
@@ -489,12 +479,12 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage IV";
+            modalContent1.textContent = "Congratulations! You have completed all stages!";
             modalDiv.appendChild(modalContent1);
 
-            var modalContent2 = document.createElement("p");
-            modalContent2.textContent = "Would you like to proceed to the next stage?";
-            modalDiv.appendChild(modalContent2);
+            // var modalContent2 = document.createElement("p");
+            // modalContent2.textContent = "Would you like to proceed to the next stage?";
+            // modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
@@ -504,18 +494,18 @@ function showModal() {
             modalButton.appendChild(modalButtonRestart);
             modalButtonRestart.className = "restart";
             var modalButtonRestartContent = document.querySelector("button.restart");
-            modalButtonRestartContent.innerHTML = "I Give Up";
+            modalButtonRestartContent.innerHTML = "Play Again";
 
-            var modalButtonNextStage = document.createElement("button");
-            modalButton.appendChild(modalButtonNextStage);
-            modalButtonNextStage.className = "nextStage";
-            var modalButtonNextStageContent = document.querySelector("button.nextStage");
-            modalButtonNextStageContent.innerHTML = "Let's Go!";
+            // var modalButtonNextStage = document.createElement("button");
+            // modalButton.appendChild(modalButtonNextStage);
+            // modalButtonNextStage.className = "nextStage";
+            // var modalButtonNextStageContent = document.querySelector("button.nextStage");
+            // modalButtonNextStageContent.innerHTML = "Let's Go!";
 
             document.querySelector(".modal-box").classList.remove("hidden");
             document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stageCall);
-            document.querySelector("button.nextStage").addEventListener("click", addClicker);
+            // document.querySelector("button.nextStage").addEventListener("click", stageCall);
+            // document.querySelector("button.nextStage").addEventListener("click", addClicker);
             break;
         default:
             break;
@@ -529,8 +519,10 @@ function hideModalRestart() {
     document.getElementById("stage").firstElementChild.textContent = stage;
     document.getElementById("attempts").firstElementChild.textContent = 0;
     document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
-    stageCall();// this will later lead to the very first page of the website
+    stageCall(stage);
     addClicker();
+    document.querySelector(".startPage").className = "startPage";
+    document.querySelector(".container").classList.toggle("hidden");
 };
 
 function hideModalProceed() {
