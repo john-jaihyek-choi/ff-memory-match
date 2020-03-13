@@ -15,7 +15,7 @@ var felyne = null;
 var stageImg = {
     //3 x 2
     1: [
-        "tzitziYaKu","tzitziYaKu","kulu", "kulu", "pukeiPukei", "pukeiPukei"
+        "card-zangan","card-zangan","card-black-mage", "card-black-mage", "card-evoker", "card-evoker"
     ],
     //6 x 2
     2: [
@@ -51,17 +51,17 @@ var gameCardDiv = document.getElementById("gameCards");
 function initializeGame () {
     //////////dom structure///////////
     
-    // header
-    var headerTitle = "";
-    var headerClass = "col-12";
+    // // header
+    // var headerTitle = "";
+    // var headerClass = "col-12";
 
-    var headerRow = document.createElement("div");
-    headerRow.className = "headerRow " + headerClass;
-    container.append(headerRow);
+    // var headerRow = document.createElement("div");
+    // headerRow.className = "headerRow " + headerClass;
+    // container.append(headerRow);
 
-    var headerRowText = document.createElement("header");
-    headerRowText.textContent = headerTitle;
-    headerRow.append(headerRowText);
+    // var headerRowText = document.createElement("header");
+    // headerRowText.textContent = headerTitle;
+    // headerRow.append(headerRowText);
 
 
     //gameRow
@@ -134,33 +134,33 @@ function initializeGame () {
     cardColumn.setAttribute("id", cardColumnId);
     gameRow.append(cardColumn);
 
-    //sideBar
-    var sideBarClass = "col-12";
+    // //sideBar
+    // var sideBarClass = "col-12";
 
-    var sideBar = document.createElement("div");
-    sideBar.className = "sideBar " + sideBarClass;
-    container.append(sideBar);
+    // var sideBar = document.createElement("div");
+    // sideBar.className = "sideBar " + sideBarClass;
+    // container.append(sideBar);
 
-    var upperSideBar = document.createElement("div");
-    upperSideBar.className = "utility upperSideBar";
-    sideBar.append(upperSideBar);
+    // var upperSideBar = document.createElement("div");
+    // upperSideBar.className = "utility upperSideBar";
+    // sideBar.append(upperSideBar);
 
-    var lowerSideBar = document.createElement("div");
-    lowerSideBar.className = "utility lowerSideBar";
-    sideBar.append(lowerSideBar);
+    // var lowerSideBar = document.createElement("div");
+    // lowerSideBar.className = "utility lowerSideBar";
+    // sideBar.append(lowerSideBar);
 
 
-    //itemBar
-    var itemBarClassList = [
-        "",
-        ""
-    ];
+    // //itemBar
+    // var itemBarClassList = [
+    //     "",
+    //     ""
+    // ];
 
-    for (i = 0; i < itemBarClassList.length; i++) {
-        var itemBar = document.createElement("div");
-        itemBar.className = "itemBar " + itemBarClassList[i];
-        upperSideBar.append(itemBar);
-    };
+    // for (i = 0; i < itemBarClassList.length; i++) {
+    //     var itemBar = document.createElement("div");
+    //     itemBar.className = "itemBar " + itemBarClassList[i];
+    //     upperSideBar.append(itemBar);
+    // };
 }
 
 /////////stage DOM //////////////////////////
@@ -222,7 +222,7 @@ function unhideCard() {
         secondCardClicked.classList.remove("hidden");
         clearCardClicked();
         addClicker();
-    }, 1500);
+    }, 1700);
 };
 
 function clearCardClicked() {
