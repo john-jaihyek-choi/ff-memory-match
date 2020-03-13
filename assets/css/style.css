@@ -68,7 +68,7 @@ body {
  }
 
  .stage1Background {
-   background-image: url(../images/stage1background.jpg);
+   background-image: url(../images/midgar-3.jpg);
  }
 
  .stage2Background {
@@ -196,78 +196,81 @@ body {
    flex-basis: calc(100%/3);
  }
 
- /* .standby {
-   height: 18%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-standby-2.gif),
-      url(../images/standbygif.gif),
-      url(../images/hp-bar-png-19.png);
-   background-size: 
-      30%,
-      contain,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      87% 100%,
-      100px 8px,
-      left -40px;
- } */
-
  .standby {
    height: 18%;
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
-      url(../images/sephiroth-action-1.gif);
-      /* url(../images/hp-bar-png-19.png); */
-   background-size: 
-      40%,
-      150%,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      95% 100%,
-      80% 80%,
-      left -40px;
- }
-
- .fire {
-   height: 18%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-action-1.gif),
-      url(../images/standbygif.gif);
-      /* url(../images/hp-bar-png-19.png); */
-   background-size: 
-      115%,
-      contain,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      10% 15%,
-      100px 8px,
-      left -40px;
- }
-
- .swingSword {
-   height: 18%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/dragonstandby.gif),
-      url(../images/swingsword.webp),
+      url(../images/cloud-standby-2r.gif),
       url(../images/hp-bar-png-19.png);
    background-size: 
-      contain,
+      40%,
+      32%,
+      contain;
+   background-repeat: 
+      no-repeat,
+      no-repeat,
+      no-repeat;
+   background-position: 
+      107% 94%,
+      24% 96%,
+      left -40px;
+ }
+
+
+/* sephiroth */
+.fire {
+   height: 18%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/sephiroth-action-1st.gif),
+      url(../images/cloud-standby-2r.gif),
+      url(../images/hp-bar-png-19.png);
+   background-size: 
+      150%,
+      32%,
+      contain;
+   background-repeat: 
+      no-repeat,
+      no-repeat,
+      no-repeat;
+   background-position: 
+      70% 80%,
+      24% 96%,
+      left -40px;
+ }
+
+ /* cloud */
+ /* .fire {
+   height: 18%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/sephiroth-standby-2.gif),
+      url(../images/cloud-action-8rs0.8.gif),
+      url(../images/hp-bar-png-19.png);
+   background-size: 
+      40%,
+      69%,
+      contain;
+   background-repeat: 
+      no-repeat,
+      no-repeat,
+      no-repeat;
+   background-position: 
+      107% 94%,
+      13% 37%,
+      left -40px;
+ } */
+
+ .swingSword { /* cloud */
+   height: 18%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/sephiroth-standby-2.gif),
+      url(../images/cloud-action-8rf.gif),
+      url(../images/hp-bar-png-19.png);
+   background-size: 
+      40%,
       contain,
       contain;
    background-repeat: 
