@@ -196,15 +196,15 @@ body {
    flex-basis: calc(100%/3);
  }
 
- .standby {
+ /* .standby {
    height: 18%;
    flex-basis: 45%;
    border-radius: 10px;
-   background: url(../images/dragonstandby.gif),
+   background: url(../images/sephiroth-standby-2.gif),
       url(../images/standbygif.gif),
       url(../images/hp-bar-png-19.png);
    background-size: 
-      contain,
+      30%,
       contain,
       contain;
    background-repeat: 
@@ -212,8 +212,29 @@ body {
       no-repeat,
       no-repeat;
    background-position: 
-      130px -1px,
+      87% 100%,
       100px 8px,
+      left -40px;
+ } */
+
+ .standby {
+   height: 18%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/sephiroth-standby-2.gif),
+      url(../images/sephiroth-action-1.gif);
+      /* url(../images/hp-bar-png-19.png); */
+   background-size: 
+      40%,
+      150%,
+      contain;
+   background-repeat: 
+      no-repeat,
+      no-repeat,
+      no-repeat;
+   background-position: 
+      95% 100%,
+      80% 80%,
       left -40px;
  }
 
@@ -221,11 +242,11 @@ body {
    height: 18%;
    flex-basis: 45%;
    border-radius: 10px;
-   background: url(../images/dragonfire.gif),
-      url(../images/standbygif.gif),
-      url(../images/hp-bar-png-19.png);
+   background: url(../images/sephiroth-action-1.gif),
+      url(../images/standbygif.gif);
+      /* url(../images/hp-bar-png-19.png); */
    background-size: 
-      contain,
+      115%,
       contain,
       contain;
    background-repeat: 
@@ -233,7 +254,7 @@ body {
       no-repeat,
       no-repeat;
    background-position: 
-      130px -1px,
+      10% 15%,
       100px 8px,
       left -40px;
  }
