@@ -19,19 +19,18 @@ var stageImg = {
     ],
     //6 x 2
     2: [
-        "barioth", "barioth", "diablos", "diablos", "legiana", "legiana",
-        "paolumu", "paolumu", "radobaan", "radobaan", "tobiKadachi", "tobiKadachi"
+        "card-aerith", "card-aerith", "card-gadot", "card-gadot", "card-jessie", "card-jessie",
+        "card-barret-1", "card-barret-1", "card-tifa", "card-tifa", "card-redxiii", "card-redxiii"
     ],
     //6 x 3
     3: [
-        "azurerath", "azurerath", "bazel", "bazel", "jyuratodus", "jyuratodus", "viperTobi",  "viperTobi",
-        "anjanath", "anjanath", "odogaron", "odogaron", "rathalos", "rathalos", "teostra", "teostra", "zorah", "zorah"
+        "card-angeal", "card-angeal", "card-cloud-5", "card-cloud-5", "card-genesis", "card-genesis", "card-laguna",  "card-laguna",
+        "card-reno", "card-reno", "card-rufus", "card-rufus", "card-vincent-1", "card-vincent-1", "card-yuffie", "card-yuffie", "card-zack-1", "card-zack-1"
     ],
-    //6 x 4
+    //6 x 3 Final
     4: [
         "behemoth", "behemoth", "kulveTarroth", "kulveTarroth", "ebonyOdogaron", "ebonyOdogaron", "kirin", "kirin", "kushala", "kushala",
-        "namielle",  "namielle", "nargacuga", "nargacuga", "nergigante", "nergigante", "tigrex", "tigrex", "xeno", "xeno", 
-        "yianGaruga", "yianGaruga", "zinogre","zinogre"
+        "namielle",  "namielle", "nargacuga", "nargacuga", "nergigante", "nergigante", "tigrex", "tigrex"
     ]
 };
 
@@ -297,9 +296,9 @@ function handleClick(event) {
             setTimeout(function () {
                 document.querySelector(".actionIcon").classList.remove("swingSword");
                 document.querySelector(".actionIcon").classList.add("standby");
-            },1400); 
+            },1300); 
             matches++;
-            addClicker();
+            setTimeout(addClicker,1400);
             clearCardClicked();
             displayStats();
         } else {

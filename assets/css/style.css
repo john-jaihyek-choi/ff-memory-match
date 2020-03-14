@@ -72,11 +72,11 @@ body {
  }
 
  .stage2Background {
-   background-image: url(../images/stage2Background.jpg);
+   background-image: url(../images/midgar-1.jpg);
  }
 
  .stage3Background {
-   background-image: url(../images/stage3Background.png);
+   background-image: url(../images/midgar-2.png);
  }
 
  .stage4Background {
@@ -247,7 +247,7 @@ body {
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-action-8rs0.8.gif),
+      url(../images/cloud-action-8rs1.0.gif),
       url(../images/hp-bar-png-19.png);
    background-size: 
       40%,
@@ -281,14 +281,14 @@ body {
 
 .stage1Card {
    width: 26%;
-   height: 46%;
+   height: 48%;
    position: relative;
    cursor: pointer;
 }
 
 .stage2Card {
-   width: 23%;
-   height: 31%;
+   width: 16%;
+   height: 33%;
    position: relative;
    cursor: pointer;
 }
@@ -311,14 +311,15 @@ body {
    border: 5px solid #55FF2B;
    margin: -5px;
    border-radius: 15px;
-   transform: scale(1.1);
+   transform: scale(1.05);
    transition: transform 0.25s;
+   box-sizing: content-box;
 }
  
 .card-front, .card-back {
-   height: 100%;
-   width: 77%;
-   background-size: cover;
+   height: 98%;
+   width: 75%;
+   background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
    position: absolute;
@@ -381,8 +382,7 @@ body {
 
 .card-back {
    background-image: url(../images/cardback-1.jpg);
-   background-color: black;
-   background-size: cover
+   background-size: contain;
 }
 
 .modal-box {

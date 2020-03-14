@@ -7,50 +7,50 @@
 .card-evoker{
     background-image: url(../images/Stage1/card-evoker.png);
 }
-.barioth {
-    background-image: url(../images/Stage2/Barioth.jpg);
+.card-aerith {
+    background-image: url(../images/Stage2/card-aerith.jpg);
 } 
-.diablos{
-    background-image: url(../images/Stage2/Diablos.jpg);
+.card-barret-1{
+    background-image: url(../images/Stage2/card-barret-1.jpg);
 }
-.legiana{
-    background-image: url(../images/Stage2/Legiana.jpg);
+.card-gadot{
+    background-image: url(../images/Stage2/card-gadot.png);
 } 
-.paolumu{
-    background-image: url(../images/Stage2/Paolumu.jpg);
+.card-jessie{
+    background-image: url(../images/Stage2/card-jessie.png);
 } 
-.radobaan{
-    background-image: url(../images/Stage2/Radobaan.jpg);
+.card-redxiii{
+    background-image: url(../images/Stage2/card-redxiii.png);
 } 
-.tobiKadachi {
-    background-image: url(../images/Stage2/TobiKadachi.jpg);
+.card-tifa {
+    background-image: url(../images/Stage2/card-tifa.png);
 }
-.azurerath{
-    background-image: url(../images/Stage3/Azurerath.jpg);
+.card-angeal {
+    background-image: url(../images/Stage3/card-angeal.jpg);
 }
-.bazel{
-    background-image: url(../images/Stage3/Bazel.jpg);
+.card-cloud-5{
+    background-image: url(../images/Stage3/card-cloud-5.jpg);
 } 
-.jyuratodus{
-    background-image: url(../images/Stage3/JyuratodusRender.jpg);
+.card-genesis{
+    background-image: url(../images/Stage3/card-genesis.jpg);
 } 
-.anjanath{
-    background-image: url(../images/Stage3/Anjanath.jpg);
+.card-laguna{
+    background-image: url(../images/Stage3/card-laguna.jpg);
 } 
-.viperTobi{
-    background-image: url(../images/Stage3/Vipertobi.jpg);
+.card-reno{
+    background-image: url(../images/Stage3/card-reno.jpg);
 } 
-.odogaron{
-    background-image: url(../images/Stage3/Odogaron.jpg);
+.card-rufus{
+    background-image: url(../images/Stage3/card-rufus.jpg);
 } 
-.rathalos{
-    background-image: url(../images/Stage3/Rathalos.jpg);
+.card-vincent-1{
+    background-image: url(../images/Stage3/card-vincent-1.jpg);
 } 
-.teostra{
-    background-image: url(../images/Stage3/Teostra.jpg);
+.card-yuffie{
+    background-image: url(../images/Stage3/card-yuffie.jpg);
 } 
-.zorah{
-    background-image: url(../images/Stage3/Zorah.jpg);
+.card-zack-1{
+    background-image: url(../images/Stage3/card-zack-1.jpg);
 }
 .behemoth{
     background-image: url(../images/Stage4/Behemoth.jpg);
