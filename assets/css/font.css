@@ -1,4 +1,8 @@
 @font-face {
-    font-family: MHFont;
-    src: url(../font/monsterhunter.ttf);
-};
+    font-family: 'FFFont';
+    src: url(../font/Final\ Fantasy\ VII.ttf);
+}
+@font-face {
+    font-family: 'FFFont1';
+    src: url(../font/finalf.ttf);
+}

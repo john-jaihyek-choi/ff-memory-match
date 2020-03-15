@@ -24,13 +24,13 @@ var stageImg = {
     ],
     //6 x 3
     3: [
-        "card-angeal", "card-angeal", "card-cloud-5", "card-cloud-5", "card-genesis", "card-genesis", "card-laguna",  "card-laguna",
+        "card-angeal", "card-angeal", "card-cloud-5", "card-cloud-5", "card-genesis", "card-genesis", "card-cloud-8",  "card-cloud-8",
         "card-reno", "card-reno", "card-rufus", "card-rufus", "card-vincent-1", "card-vincent-1", "card-yuffie", "card-yuffie", "card-zack-1", "card-zack-1"
     ],
     //6 x 3 Final
     4: [
-        "behemoth", "behemoth", "kulveTarroth", "kulveTarroth", "ebonyOdogaron", "ebonyOdogaron", "kirin", "kirin", "kushala", "kushala",
-        "namielle",  "namielle", "nargacuga", "nargacuga", "nergigante", "nergigante", "tigrex", "tigrex"
+        "card-cloud-1", "card-cloud-1", "card-cloud-3", "card-cloud-3", "card-cloud-4", "card-cloud-4", "card-sephiroth-2", "card-sephiroth-2", "card-sephiroth-3", "card-sephiroth-3",
+        "card-sephiroth-5",  "card-sephiroth-5", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-4", "card-sephiroth-4"
     ]
 };
 
@@ -166,7 +166,9 @@ function initializeGame () {
 ///////prototype//////////
 function stageCall (currentStage) {
     // var currentStage = stage;
-    currentStage = stage
+    currentStage = stage;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = 0 + " %";
     repopulateCardColumn();
 
     if(currentStage > 1) {
@@ -177,7 +179,7 @@ function stageCall (currentStage) {
     for (i = 0; i < stageImg[currentStage].length; i++) {
         //create card which goes into cardColumn
         var card = document.createElement("div")
-        card.className = "card " + ("stage"+currentStage+"Card");
+        card.className = "card " + ("stage" + currentStage + "Card");
         document.querySelector(".cardColumn").append(card);
 
         //create cardFront which goes into card created above
@@ -290,11 +292,11 @@ function handleClick(event) {
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
         if (firstCardClass === secondCardClass) {
-            //swingSword Trigger  //make a function out of it and call it.
+            //cloud Trigger  //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("swingSword");
+            document.querySelector(".actionIcon").classList.add("cloud");
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("swingSword");
+                document.querySelector(".actionIcon").classList.remove("cloud");
                 document.querySelector(".actionIcon").classList.add("standby");
             },1300); 
             matches++;
@@ -302,11 +304,11 @@ function handleClick(event) {
             clearCardClicked();
             displayStats();
         } else {
-            //fireTrigger   //make a function out of it and call it.
+            //Sephiroth Trigger   //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("fire");
+            document.querySelector(".actionIcon").classList.add("seph");
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("fire");
+                document.querySelector(".actionIcon").classList.remove("seph");
                 document.querySelector(".actionIcon").classList.add("standby");
             },1400); 
             //

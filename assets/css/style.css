@@ -55,7 +55,7 @@
 
 .headerIntro {
    text-align: center;
-   font-family: MHFont;
+   font-family: "FFFont";
    font-size: 1.5rem;
    color: rgba(255, 255, 255, 0.886);
    text-shadow: 5px 5px 8px black;
@@ -163,21 +163,23 @@ body {
    flex-wrap: wrap;
    flex-direction: row;
    flex-basis: 50%;
-   background-color: #130E0C;
-   border-radius: 10px;
+   background-image: url(../images/empty-dialogue.png);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   font-family: "FFFont";
+   font-size: 2rem;
+   color: white;
  }
   
- .statBox{
+ /* .statBox{
    display: flex;
    justify-content: center;
    align-items: center;
    border-radius: 10px;
    text-align: center;
    font-size: 1.3em;
-   color: whitesmoke;
-   background-color: #130E0C;
- }
-
+ } */
+/* 
  .statBox:first-child {
    height: 30%;
    flex-basis: 100%;
@@ -185,7 +187,7 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
- }
+ } */
 
  .scoreHead {
    height: 35%;
@@ -220,7 +222,7 @@ body {
 
 
 /* sephiroth */
-.fire {
+.seph {
    height: 22%;
    flex-basis: 45%;
    border-radius: 10px;
@@ -242,7 +244,7 @@ body {
  }
 
 /* cloud */
- .swingSword { 
+ .cloud { 
    height: 22%;
    flex-basis: 45%;
    border-radius: 10px;
@@ -302,18 +304,15 @@ body {
 
 .stage4Card {
    width: 15%;
-   height: 23%;
+   height: 30%;
    position: relative;
    cursor: pointer;
 }
 
-.card-front:hover, .card-back:hover {
-   border: 5px solid #55FF2B;
-   margin: -5px;
+.card-back:hover {
    border-radius: 15px;
    transform: scale(1.05);
    transition: transform 0.25s;
-   box-sizing: content-box;
 }
  
 .card-front, .card-back {

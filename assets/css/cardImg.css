@@ -34,8 +34,8 @@
 .card-genesis{
     background-image: url(../images/Stage3/card-genesis.jpg);
 } 
-.card-laguna{
-    background-image: url(../images/Stage3/card-laguna.jpg);
+.card-cloud-8{
+    background-image: url(../images/Stage3/card-cloud-8.jpg);
 } 
 .card-reno{
     background-image: url(../images/Stage3/card-reno.jpg);
@@ -52,39 +52,24 @@
 .card-zack-1{
     background-image: url(../images/Stage3/card-zack-1.jpg);
 }
-.behemoth{
+.card-cloud-1{
     background-image: url(../images/Stage4/Behemoth.jpg);
 } 
-.kulveTarroth{
+.card-cloud-3{
     background-image: url(../images/Stage4/KulveTarroth.jpg);
 } 
-.ebonyOdogaron{
+.card-sephiroth-2{
     background-image: url(../images/Stage4/EbonyOdogaron.jpg);
 } 
-.kirin{
+.card-sephiroth-3{
     background-image: url(../images/Stage4/Kirin.jpg);
 } 
-.kushala{
+.card-sephiroth-4{
     background-image: url(../images/Stage4/Kushala.jpg);
 } 
-.namielle{
+.card-sephiroth-5{
     background-image: url(../images/Stage4/Namielle.jpg);
 } 
-.nargacuga{
+.card-sephiroth{
     background-image: url(../images/Stage4/Nargacuga.jpg);
-} 
-.nergigante{
-    background-image: url(../images/Stage4/Nergigante.jpg);
-} 
-.tigrex{
-    background-image: url(../images/Stage4/Tigrex.jpg);
-} 
-.xeno{
-    background-image: url(../images/Stage4/Xeno.jpg);
-} 
-.yianGaruga{
-    background-image: url(../images/Stage4/YianGaruga.jpg);
-} 
-.zinogre{
-    background-image: url(../images/Stage4/Zinogre.jpg);
 }
