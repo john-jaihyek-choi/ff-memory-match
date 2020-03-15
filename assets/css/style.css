@@ -158,17 +158,18 @@ body {
  }
   
  .statColumn {
-   height: 22%;
+   height: 20%;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    flex-basis: 50%;
-   background-image: url(../images/empty-dialogue.png);
+   background-image: url(../images/inventory.png);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    font-family: "FFFont";
    font-size: 2rem;
    color: white;
+   border-radius: 8px;
  }
   
  /* .statBox{
@@ -204,8 +205,8 @@ body {
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-standby-2r.gif),
-      url(../images/hp-bar-png-19.png);
+      url(../images/cloud-standby-2r.gif);
+      /* url(../images/hp-bar-png-19.png); */
    background-size: 
       40%,
       32%,
@@ -227,8 +228,8 @@ body {
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-action-1st.gif),
-      url(../images/cloud-standby-2r.gif),
-      url(../images/hp-bar-png-19.png);
+      url(../images/cloud-standby-2r.gif);
+      /* url(../images/hp-bar-png-19.png); */
    background-size: 
       150%,
       32%,
@@ -249,8 +250,8 @@ body {
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-action-8rs1.0.gif),
-      url(../images/hp-bar-png-19.png);
+      url(../images/cloud-action-8rs1.0.gif);
+      /* url(../images/hp-bar-png-19.png); */
    background-size: 
       40%,
       69%,
