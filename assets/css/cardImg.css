@@ -53,23 +53,29 @@
     background-image: url(../images/Stage3/card-zack-1.jpg);
 }
 .card-cloud-1{
-    background-image: url(../images/Stage4/Behemoth.jpg);
+    background-image: url(../images/Stage4/card-cloud-1.jpg);
 } 
 .card-cloud-3{
-    background-image: url(../images/Stage4/KulveTarroth.jpg);
+    background-image: url(../images/Stage4/card-cloud-3.jpg);
 } 
 .card-sephiroth-2{
-    background-image: url(../images/Stage4/EbonyOdogaron.jpg);
+    background-image: url(../images/Stage4/card-sephiroth-2.jpg);
 } 
 .card-sephiroth-3{
-    background-image: url(../images/Stage4/Kirin.jpg);
+    background-image: url(../images/Stage4/card-sephiroth-3.jpg);
 } 
 .card-sephiroth-4{
-    background-image: url(../images/Stage4/Kushala.jpg);
+    background-image: url(../images/Stage4/card-sephiroth-4.jpg);
 } 
 .card-sephiroth-5{
-    background-image: url(../images/Stage4/Namielle.jpg);
+    background-image: url(../images/Stage4/card-sephiroth-5.jpg);
 } 
 .card-sephiroth{
-    background-image: url(../images/Stage4/Nargacuga.jpg);
+    background-image: url(../images/Stage4/card-sephiroth.jpg);
+}
+.card-cloud-4 {
+    background-image: url(../images/Stage4/card-cloud-4.jpg);
+}
+.card-sephiroth-1 {
+    background-image: url(../images/Stage4/card-sephiroth-1.jpg);
 }

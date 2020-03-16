@@ -279,51 +279,45 @@ body {
    width: 15%;
    height: 30%;
    position: relative;
-   cursor: pointer;
 }
 
 .stage1Card {
    width: 26%;
    height: 48%;
    position: relative;
-   cursor: pointer;
 }
 
 .stage2Card {
    width: 16%;
    height: 33%;
    position: relative;
-   cursor: pointer;
 }
 
 .stage3Card {
    width: 15%;
    height: 30%;
    position: relative;
-   cursor: pointer;
 }
 
 .stage4Card {
    width: 15%;
    height: 30%;
    position: relative;
-   cursor: pointer;
 }
 
 .card-back:hover {
-   border-radius: 15px;
    transform: scale(1.05);
    transition: transform 0.25s;
+   cursor: pointer;
 }
  
 .card-front, .card-back {
    height: 98%;
-   width: 75%;
+   width: 68%;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
    position: absolute;
-   border-radius: 10px;
 }
 
 .sideBar {

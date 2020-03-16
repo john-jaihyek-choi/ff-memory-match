@@ -30,7 +30,7 @@ var stageImg = {
     //6 x 3 Final
     4: [
         "card-cloud-1", "card-cloud-1", "card-cloud-3", "card-cloud-3", "card-cloud-4", "card-cloud-4", "card-sephiroth-2", "card-sephiroth-2", "card-sephiroth-3", "card-sephiroth-3",
-        "card-sephiroth-5",  "card-sephiroth-5", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth-4", "card-sephiroth-4"
+        "card-sephiroth-5",  "card-sephiroth-5", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth", "card-sephiroth", "card-sephiroth-4", "card-sephiroth-4"
     ]
 };
 
