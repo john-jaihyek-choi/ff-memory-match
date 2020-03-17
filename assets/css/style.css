@@ -229,7 +229,6 @@ body {
    border-radius: 10px;
    background: url(../images/sephiroth-action-1st.gif),
       url(../images/cloud-standby-2r.gif);
-      /* url(../images/hp-bar-png-19.png); */
    background-size: 
       150%,
       32%,
@@ -250,8 +249,7 @@ body {
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-action-8rs1.0.gif);
-      /* url(../images/hp-bar-png-19.png); */
+      url(../images/cloud-action-8s0.5.gif);
    background-size: 
       40%,
       69%,

@@ -298,9 +298,9 @@ function handleClick(event) {
             setTimeout(function () {
                 document.querySelector(".actionIcon").classList.remove("cloud");
                 document.querySelector(".actionIcon").classList.add("standby");
-            },1300); 
+            },800); 
             matches++;
-            setTimeout(addClicker,1400);
+            setTimeout(addClicker,900);
             clearCardClicked();
             displayStats();
         } else {
