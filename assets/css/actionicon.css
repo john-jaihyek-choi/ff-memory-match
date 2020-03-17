@@ -1,0 +1,108 @@
+/* cloud-normal
+ .standby {
+   height: 22%;
+   flex-basis: 45%;
+   border-radius: 10px;
+   background: url(../images/sephiroth-standby-2.gif),
+      url(../images/cloud-standby-2r.gif);
+   background-size: 
+      40%,
+      32%,
+      contain;
+   background-repeat: 
+      no-repeat,
+      no-repeat;
+   background-position: 
+      107% 94%,
+      24% 96%,
+      left -40px;
+ }
+
+ .cloud { 
+    height: 22%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/sephiroth-standby-2.gif),
+        url(../images/cloud-action-8s0.5.gif);
+    background-size: 
+        40%,
+        69%,
+        contain;
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-position: 
+        107% 94%,
+        13% 37%,
+        left -40px;
+}
+ 
+.seph {
+    height: 22%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/sephiroth-action-1st.gif),
+        url(../images/cloud-standby-2r.gif);
+    background-size: 
+        150%,
+        32%,
+        contain;
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-position: 
+        70% 80%,
+        24% 96%,
+        left -40px;
+} */
+
+  /* cloud-kh */
+.standby {
+    height: 22%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/sephiroth-standby-2.gif),
+       url(../images/cloud-kh-standby.gif);
+    background-size: 
+       40%,
+       40%;
+    background-repeat: 
+       no-repeat,
+       no-repeat;
+    background-position: 
+       107% 94%,
+       0% 96%;
+  }
+
+.cloud { 
+    height: 22%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/sephiroth-standby-2.gif),
+        url(../images/cloud-kh-action-1.3s.gif);
+    background-size: 
+        40%,
+        120%;
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-position: 
+        107% 94%,
+        64% 30%;
+}
+.seph {
+    height: 22%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/sephiroth-action-1st.gif),
+       url(../images/cloud-kh-standby.gif);
+    background-size: 
+       150%,
+       40%;
+    background-repeat: 
+       no-repeat,
+       no-repeat;
+    background-position: 
+       70% 80%,
+       0% 96%;
+}

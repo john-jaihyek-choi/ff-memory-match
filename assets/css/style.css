@@ -5,31 +5,31 @@
 
 .startPage {
    height: 100vh;
-   background-image: url(../images/startGameBackground.jpg);
+   background-image: url(../images/ff-startpage.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    display: flex;
    flex-wrap: wrap;
 }
 
-.felyneSelect {
+.characterSelect {
    display: flex;
-   flex-wrap: wrap;
-   height: 60%;
+   justify-content: flex-end;
+   height: 80%;
 }
 
-.felyneCard {
+.characterCard {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    border: 5px solid transparent;
    border-radius: 15px;
-   flex-basis: 28%;
+   flex-basis: 30%;
    margin: 0 auto;
    height: 45%;
 }
 
-.felyneCard:hover {
+.characterCard:hover {
    border-color: #55FF2B;
    transform: scale(1.05);
    transition: transform 0.25s;
@@ -43,14 +43,6 @@
    margin: 2% auto;
    height: 25%;
    align-content: center;
-}
-
-.headerContent {
-   background-image: url(../images/startPageLogo.png);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
-   height: 100%;
 }
 
 .headerIntro {
@@ -172,23 +164,19 @@ body {
    border-radius: 8px;
  }
   
- /* .statBox{
+ .statBox{
    display: flex;
    justify-content: center;
    align-items: center;
    border-radius: 10px;
    text-align: center;
    font-size: 1.3em;
- } */
-/* 
+ }
+
  .statBox:first-child {
    height: 30%;
    flex-basis: 100%;
-   background-image: url(../images/statbartop.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
- } */
+ }
 
  .scoreHead {
    height: 35%;
@@ -198,70 +186,6 @@ body {
  .scoreCount {
    height: 35%;
    flex-basis: calc(100%/3);
- }
-
- .standby {
-   height: 22%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-standby-2r.gif);
-      /* url(../images/hp-bar-png-19.png); */
-   background-size: 
-      40%,
-      32%,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      107% 94%,
-      24% 96%,
-      left -40px;
- }
-
-
-/* sephiroth */
-.seph {
-   height: 22%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-action-1st.gif),
-      url(../images/cloud-standby-2r.gif);
-   background-size: 
-      150%,
-      32%,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      70% 80%,
-      24% 96%,
-      left -40px;
- }
-
-/* cloud */
- .cloud { 
-   height: 22%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-action-8s0.5.gif);
-   background-size: 
-      40%,
-      69%,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat,
-      no-repeat;
-   background-position: 
-      107% 94%,
-      13% 37%,
-      left -40px;
  }
 
 .cardColumn {
@@ -342,28 +266,12 @@ body {
    background-position: center;
 }
 
-.felyne1 {
+.character1 {
    background-image: url(../images/felyne-1.gif);
 }
 
-.felyne2 {
+.character2 {
    background-image: url(../images/felyne-2.webp);
-}
-
-.felyne3 {
-   background-image: url(../images/felyne-3.webp);
-}
-
-.felyne4 {
-   background-image: url(../images/felyne-4.webp);
-}
-
-.felyne5 {
-   background-image: url(../images/felyne-5.webp);
-}
-
-.felyne6 {
-   background-image: url(../images/felyne-6.webp);
 }
 
 .itemBar {

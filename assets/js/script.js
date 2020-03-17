@@ -35,9 +35,9 @@ var stageImg = {
 };
 
 //event listener
-for (var i = 0; i < document.querySelectorAll(".felyneCard").length; i++) {
-    document.querySelectorAll(".felyneCard")[i].addEventListener("click", startGame);
-    document.querySelectorAll(".felyneCard")[i].addEventListener("click", felyneSelect);
+for (var i = 0; i < document.querySelectorAll(".characterCard").length; i++) {
+    document.querySelectorAll(".characterCard")[i].addEventListener("click", startGame);
+    document.querySelectorAll(".characterCard")[i].addEventListener("click", characterSelect);
 } 
 
 initializeGame();
@@ -546,7 +546,7 @@ function hideStartModal () {
     document.querySelector(".container").classList.toggle("hidden");
 }
 
-function felyneSelect(event) {
+function characterSelect(event) {
     felyne = event.currentTarget.classList[event.currentTarget.classList.length - 1];
     document.querySelector(".lowerSideBar").className = "utility lowerSideBar";
     document.querySelector(".lowerSideBar").classList.add(felyne);
