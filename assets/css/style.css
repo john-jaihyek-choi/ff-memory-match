@@ -4,18 +4,19 @@
 }
 
 .startPage {
-   height: 100vh;
+   height: 100%;
    background-image: url(../images/ff-startpage.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    display: flex;
+   flex-direction: row-reverse;
    flex-wrap: wrap;
 }
 
 .characterSelect {
    display: flex;
    justify-content: flex-end;
-   height: 80%;
+   height: 69%;
 }
 
 .characterCard {
