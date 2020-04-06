@@ -1,4 +1,4 @@
-/* cloud-normal
+/* cloud-normal */
  .standby {
    height: 22%;
    flex-basis: 45%;
@@ -54,10 +54,10 @@
         70% 80%,
         24% 96%,
         left -40px;
-} */
+}
 
   /* cloud-kh */
-.standby {
+/* .standby {
     height: 22%;
     flex-basis: 45%;
     border-radius: 10px;
@@ -105,4 +105,4 @@
     background-position: 
        70% 80%,
        0% 96%;
-}
+} */
