@@ -30,14 +30,14 @@
    height: 85%;
 }
 
-.character1:hover {
+.original:hover {
    background-image: url(../images/cloud-seph-1.png);
    transform: scale(1.05);
    transition: transform 1s;
    cursor: pointer;
 }
 
-.character2:hover {
+.kh:hover {
    background-image: url(../images/cloud-seph-2.png);
    transform: scale(1.05);
    transition: transform 1s;
@@ -275,11 +275,11 @@ body {
    background-position: center;
 }
 
-.character1 {
+.original {
    background-image: url(../images/final-fantasy-logo.png);
 }
 
-.character2 {
+.kh {
    background-image: url(../images/final-fantasy-kh-logo.png);
 }
 
