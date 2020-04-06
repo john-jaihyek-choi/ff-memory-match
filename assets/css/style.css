@@ -20,19 +20,27 @@
 }
 
 .characterCard {
-   background-size: cover;
+   background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
    border: 5px solid transparent;
    border-radius: 15px;
    flex-basis: 35%;
    margin: 0 auto;
-   height: 70%;
+   height: 85%;
 }
 
-.characterCard:hover {
+.character1:hover {
+   background-image: url(../images/cloud-seph-1.png);
    transform: scale(1.05);
-   transition: transform 0.25s;
+   transition: transform 1s;
+   cursor: pointer;
+}
+
+.character2:hover {
+   background-image: url(../images/cloud-seph-2.png);
+   transform: scale(1.05);
+   transition: transform 1s;
    cursor: pointer;
 }
 
@@ -42,8 +50,8 @@
    flex-basis: 100%;
    flex-direction: row-reverse;
    margin: 2% auto;
-   height: 35%;
-   align-content: center;
+   height: 25%;
+   align-content: flex-end;
 }
 
 .headerIntro {
@@ -268,11 +276,11 @@ body {
 }
 
 .character1 {
-   background-image: url(../images/cloud-seph-1.png);
+   background-image: url(../images/final-fantasy-logo.png);
 }
 
 .character2 {
-   background-image: url(../images/cloud-seph-2.png);
+   background-image: url(../images/final-fantasy-kh-logo.png);
 }
 
 .itemBar {
