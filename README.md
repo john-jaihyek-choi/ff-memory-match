@@ -1,6 +1,6 @@
-# Monster Hunter Memory Match Game
+# Final Fantasy VII Memory Match Game
 
-A Monster Hunter memory match game that dynamically creates card board as user progresses through each stages.
+A Final Fantasy VII themed memory match game that dynamically creates card board as user progresses through each stages.
 
 ## Technologies Used
 
