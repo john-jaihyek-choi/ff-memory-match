@@ -15,30 +15,29 @@ var felyne = null;
 var stageImg = {
     //3 x 2
     1: [
-        "tzitziYaKu","tzitziYaKu","kulu", "kulu", "pukeiPukei", "pukeiPukei"
+        "card-zangan","card-zangan","card-black-mage", "card-black-mage", "card-evoker", "card-evoker"
     ],
     //6 x 2
     2: [
-        "barioth", "barioth", "diablos", "diablos", "legiana", "legiana",
-        "paolumu", "paolumu", "radobaan", "radobaan", "tobiKadachi", "tobiKadachi"
+        "card-aerith", "card-aerith", "card-gadot", "card-gadot", "card-jessie", "card-jessie",
+        "card-barret-1", "card-barret-1", "card-tifa", "card-tifa", "card-redxiii", "card-redxiii"
     ],
     //6 x 3
     3: [
-        "azurerath", "azurerath", "bazel", "bazel", "jyuratodus", "jyuratodus", "viperTobi",  "viperTobi",
-        "anjanath", "anjanath", "odogaron", "odogaron", "rathalos", "rathalos", "teostra", "teostra", "zorah", "zorah"
+        "card-angeal", "card-angeal", "card-cloud-5", "card-cloud-5", "card-genesis", "card-genesis", "card-cloud-8",  "card-cloud-8",
+        "card-reno", "card-reno", "card-rufus", "card-rufus", "card-vincent-1", "card-vincent-1", "card-yuffie", "card-yuffie", "card-zack-1", "card-zack-1"
     ],
-    //6 x 4
+    //6 x 3 Final
     4: [
-        "behemoth", "behemoth", "kulveTarroth", "kulveTarroth", "ebonyOdogaron", "ebonyOdogaron", "kirin", "kirin", "kushala", "kushala",
-        "namielle",  "namielle", "nargacuga", "nargacuga", "nergigante", "nergigante", "tigrex", "tigrex", "xeno", "xeno", 
-        "yianGaruga", "yianGaruga", "zinogre","zinogre"
+        "card-cloud-1", "card-cloud-1", "card-cloud-3", "card-cloud-3", "card-cloud-4", "card-cloud-4", "card-sephiroth-2", "card-sephiroth-2", "card-sephiroth-3", "card-sephiroth-3",
+        "card-sephiroth-5",  "card-sephiroth-5", "card-sephiroth-1", "card-sephiroth-1", "card-sephiroth", "card-sephiroth", "card-sephiroth-4", "card-sephiroth-4"
     ]
 };
 
 //event listener
-for (var i = 0; i < document.querySelectorAll(".felyneCard").length; i++) {
-    document.querySelectorAll(".felyneCard")[i].addEventListener("click", startGame);
-    document.querySelectorAll(".felyneCard")[i].addEventListener("click", felyneSelect);
+for (var i = 0; i < document.querySelectorAll(".characterCard").length; i++) {
+    document.querySelectorAll(".characterCard")[i].addEventListener("click", startGame);
+    document.querySelectorAll(".characterCard")[i].addEventListener("click", characterSelect);
 } 
 
 initializeGame();
@@ -51,17 +50,17 @@ var gameCardDiv = document.getElementById("gameCards");
 function initializeGame () {
     //////////dom structure///////////
     
-    // header
-    var headerTitle = "";
-    var headerClass = "col-12";
+    // // header
+    // var headerTitle = "";
+    // var headerClass = "col-12";
 
-    var headerRow = document.createElement("div");
-    headerRow.className = "headerRow " + headerClass;
-    container.append(headerRow);
+    // var headerRow = document.createElement("div");
+    // headerRow.className = "headerRow " + headerClass;
+    // container.append(headerRow);
 
-    var headerRowText = document.createElement("header");
-    headerRowText.textContent = headerTitle;
-    headerRow.append(headerRowText);
+    // var headerRowText = document.createElement("header");
+    // headerRowText.textContent = headerTitle;
+    // headerRow.append(headerRowText);
 
 
     //gameRow
@@ -134,40 +133,42 @@ function initializeGame () {
     cardColumn.setAttribute("id", cardColumnId);
     gameRow.append(cardColumn);
 
-    //sideBar
-    var sideBarClass = "col-12";
+    // //sideBar
+    // var sideBarClass = "col-12";
 
-    var sideBar = document.createElement("div");
-    sideBar.className = "sideBar " + sideBarClass;
-    container.append(sideBar);
+    // var sideBar = document.createElement("div");
+    // sideBar.className = "sideBar " + sideBarClass;
+    // container.append(sideBar);
 
-    var upperSideBar = document.createElement("div");
-    upperSideBar.className = "utility upperSideBar";
-    sideBar.append(upperSideBar);
+    // var upperSideBar = document.createElement("div");
+    // upperSideBar.className = "utility upperSideBar";
+    // sideBar.append(upperSideBar);
 
-    var lowerSideBar = document.createElement("div");
-    lowerSideBar.className = "utility lowerSideBar";
-    sideBar.append(lowerSideBar);
+    // var lowerSideBar = document.createElement("div");
+    // lowerSideBar.className = "utility lowerSideBar";
+    // sideBar.append(lowerSideBar);
 
 
-    //itemBar
-    var itemBarClassList = [
-        "",
-        ""
-    ];
+    // //itemBar
+    // var itemBarClassList = [
+    //     "",
+    //     ""
+    // ];
 
-    for (i = 0; i < itemBarClassList.length; i++) {
-        var itemBar = document.createElement("div");
-        itemBar.className = "itemBar " + itemBarClassList[i];
-        upperSideBar.append(itemBar);
-    };
+    // for (i = 0; i < itemBarClassList.length; i++) {
+    //     var itemBar = document.createElement("div");
+    //     itemBar.className = "itemBar " + itemBarClassList[i];
+    //     upperSideBar.append(itemBar);
+    // };
 }
 
 /////////stage DOM //////////////////////////
 ///////prototype//////////
 function stageCall (currentStage) {
     // var currentStage = stage;
-    currentStage = stage
+    currentStage = stage;
+    document.getElementById("attempts").firstElementChild.textContent = attempts;
+    document.getElementById("accuracy").firstElementChild.textContent = 0 + " %";
     repopulateCardColumn();
 
     if(currentStage > 1) {
@@ -178,7 +179,7 @@ function stageCall (currentStage) {
     for (i = 0; i < stageImg[currentStage].length; i++) {
         //create card which goes into cardColumn
         var card = document.createElement("div")
-        card.className = "card " + ("stage"+currentStage+"Card");
+        card.className = "card " + ("stage" + currentStage + "Card");
         document.querySelector(".cardColumn").append(card);
 
         //create cardFront which goes into card created above
@@ -200,7 +201,7 @@ function stageCall (currentStage) {
     maxMatches = stageImg[currentStage].length / matchPair;
 
     //shuffles cards at the start of each stage
-    shuffle(stageImg[currentStage]);
+    // shuffle(stageImg[currentStage]);
     
     matches = 0;
     
@@ -222,7 +223,7 @@ function unhideCard() {
         secondCardClicked.classList.remove("hidden");
         clearCardClicked();
         addClicker();
-    }, 1500);
+    }, 1700);
 };
 
 function clearCardClicked() {
@@ -291,23 +292,23 @@ function handleClick(event) {
         secondCardClass = secondCardClicked.previousElementSibling.className;
         removeClicker();
         if (firstCardClass === secondCardClass) {
-            //swingSword Trigger  //make a function out of it and call it.
+            //cloud Trigger  //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("swingSword");
+            document.querySelector(".actionIcon").classList.add("cloud");
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("swingSword");
+                document.querySelector(".actionIcon").classList.remove("cloud");
                 document.querySelector(".actionIcon").classList.add("standby");
-            },1400); 
+            },800); 
             matches++;
-            addClicker();
+            setTimeout(addClicker,900);
             clearCardClicked();
             displayStats();
         } else {
-            //fireTrigger   //make a function out of it and call it.
+            //Sephiroth Trigger   //make a function out of it and call it.
             document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("fire");
+            document.querySelector(".actionIcon").classList.add("seph");
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("fire");
+                document.querySelector(".actionIcon").classList.remove("seph");
                 document.querySelector(".actionIcon").classList.add("standby");
             },1400); 
             //
@@ -545,7 +546,7 @@ function hideStartModal () {
     document.querySelector(".container").classList.toggle("hidden");
 }
 
-function felyneSelect(event) {
+function characterSelect(event) {
     felyne = event.currentTarget.classList[event.currentTarget.classList.length - 1];
     document.querySelector(".lowerSideBar").className = "utility lowerSideBar";
     document.querySelector(".lowerSideBar").classList.add(felyne);
