@@ -15,21 +15,21 @@
 
 @media only screen and (max-width: 414px) {
    .startPage {
-       height: 100%;
-       background-image: url(../images/ff-startpage-m.png);
-       background-size: cover;
-       background-repeat: no-repeat;
-       background-position: center;
-       display: flex;
-       flex-direction: row-reverse;
-       flex-wrap: wrap;
+      height: 100%;
+      background-image: url(../images/ff-startpage-m.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
    }
 }
 
 .characterSelect {
    display: flex;
    justify-content: flex-end;
-   height: 55%;
+   height: 60%;
 }
 
 .characterCard {
@@ -40,7 +40,7 @@
    border-radius: 15px;
    flex-basis: 35%;
    margin: 0 auto;
-   height: 85%;
+   height: 70%;
 }
 
 .original:hover {
@@ -63,7 +63,7 @@
    flex-basis: 100%;
    flex-direction: row-reverse;
    margin: 2% auto;
-   height: 25%;
+   height: 32%;
    align-content: flex-end;
 }
 
@@ -253,7 +253,7 @@ body {
  
 .card-front, .card-back {
    height: 98%;
-   width: 68%;
+   width: 67%;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
