@@ -16,24 +16,31 @@
 .characterSelect {
    display: flex;
    justify-content: flex-end;
-   height: 69%;
+   height: 55%;
 }
 
 .characterCard {
-   background-size: cover;
+   background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
    border: 5px solid transparent;
    border-radius: 15px;
-   flex-basis: 30%;
+   flex-basis: 35%;
    margin: 0 auto;
-   height: 45%;
+   height: 85%;
 }
 
-.characterCard:hover {
-   border-color: #55FF2B;
+.original:hover {
+   background-image: url(../images/cloud-seph-1.png);
    transform: scale(1.05);
-   transition: transform 0.25s;
+   transition: transform 1s;
+   cursor: pointer;
+}
+
+.kh:hover {
+   background-image: url(../images/cloud-seph-2.png);
+   transform: scale(1.05);
+   transition: transform 1s;
    cursor: pointer;
 }
 
@@ -41,15 +48,16 @@
    display: flex;
    flex-wrap: wrap;
    flex-basis: 100%;
+   flex-direction: row-reverse;
    margin: 2% auto;
    height: 25%;
-   align-content: center;
+   align-content: flex-end;
 }
 
 .headerIntro {
    text-align: center;
    font-family: "FFFont";
-   font-size: 1.5rem;
+   font-size: 2rem;
    color: rgba(255, 255, 255, 0.886);
    text-shadow: 5px 5px 8px black;
 }
@@ -61,19 +69,19 @@ body {
  }
 
  .stage1Background {
-   background-image: url(../images/midgar-3.jpg);
+   background-image: url(../images/stage-1.gif);
  }
 
  .stage2Background {
-   background-image: url(../images/midgar-1.jpg);
+   background-image: url(../images/stage-2.gif);
  }
 
  .stage3Background {
-   background-image: url(../images/midgar-2.png);
+   background-image: url(../images/stage-3.gif);
  }
 
  .stage4Background {
-   background-image: url(../images/stage4background.jpg);
+   background-image: url(../images/stage-4.gif);
  }
   
 .container {
@@ -151,7 +159,7 @@ body {
  }
   
  .statColumn {
-   height: 20%;
+   height: 16%;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
@@ -168,7 +176,7 @@ body {
  .statBox{
    display: flex;
    justify-content: center;
-   align-items: center;
+   /* align-items: center; */
    border-radius: 10px;
    text-align: center;
    font-size: 1.3em;
@@ -267,12 +275,12 @@ body {
    background-position: center;
 }
 
-.character1 {
-   background-image: url(../images/felyne-1.gif);
+.original {
+   background-image: url(../images/final-fantasy-logo.png);
 }
 
-.character2 {
-   background-image: url(../images/felyne-2.webp);
+.kh {
+   background-image: url(../images/final-fantasy-kh-logo.png);
 }
 
 .itemBar {

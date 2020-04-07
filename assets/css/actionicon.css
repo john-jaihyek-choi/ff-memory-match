@@ -1,6 +1,6 @@
-/* cloud-normal
- .standby {
-   height: 22%;
+/* cloud-normal */
+ .original-standby {
+   height: 16%;
    flex-basis: 45%;
    border-radius: 10px;
    background: url(../images/sephiroth-standby-2.gif),
@@ -18,27 +18,25 @@
       left -40px;
  }
 
- .cloud { 
-    height: 22%;
+ .original-cloud { 
+    height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/sephiroth-standby-2.gif),
-        url(../images/cloud-action-8s0.5.gif);
+    background: url(../images/cloud-action-8s0.5.gif),
+        url(../images/sephiroth-standby-2.gif);
     background-size: 
-        40%,
         69%,
-        contain;
+        40%;
     background-repeat: 
         no-repeat,
         no-repeat;
     background-position: 
-        107% 94%,
-        13% 37%,
-        left -40px;
+        13% 60%,
+        107% 94%;
 }
  
-.seph {
-    height: 22%;
+.original-seph {
+    height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
     background: url(../images/sephiroth-action-1st.gif),
@@ -54,11 +52,11 @@
         70% 80%,
         24% 96%,
         left -40px;
-} */
+}
 
-  /* cloud-kh */
-.standby {
-    height: 22%;
+/* cloud-kh */
+.kh-standby {
+    height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
     background: url(../images/sephiroth-standby-2.gif),
@@ -74,24 +72,24 @@
        0% 96%;
   }
 
-.cloud { 
-    height: 22%;
+.kh-cloud { 
+    height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/sephiroth-standby-2.gif),
-        url(../images/cloud-kh-action-1.3s.gif);
+    background: url(../images/cloud-kh-action-1.3s.gif),
+        url(../images/sephiroth-standby-2.gif);
     background-size: 
-        40%,
-        120%;
+        120%,
+        40%;
     background-repeat: 
         no-repeat,
         no-repeat;
     background-position: 
-        107% 94%,
-        64% 30%;
+        64% 60%,
+        107% 94%;
 }
-.seph {
-    height: 22%;
+.kh-seph {
+    height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
     background: url(../images/sephiroth-action-1st.gif),

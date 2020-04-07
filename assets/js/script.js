@@ -9,7 +9,7 @@ var firstCardClicked;
 var firstCardClass;
 var secondCardClicked;
 var secondCardClass;
-var felyne = null;
+var character = null;
 
 //stage class objects
 var stageImg = {
@@ -50,19 +50,6 @@ var gameCardDiv = document.getElementById("gameCards");
 function initializeGame () {
     //////////dom structure///////////
     
-    // // header
-    // var headerTitle = "";
-    // var headerClass = "col-12";
-
-    // var headerRow = document.createElement("div");
-    // headerRow.className = "headerRow " + headerClass;
-    // container.append(headerRow);
-
-    // var headerRowText = document.createElement("header");
-    // headerRowText.textContent = headerTitle;
-    // headerRow.append(headerRowText);
-
-
     //gameRow
     var gameRowClass = "col-6"
 
@@ -119,9 +106,9 @@ function initializeGame () {
     };
 
     //actionIconColumn
-    var actionIconColumnClass = "";
+    var actionIconColumnClass = character;
     var actionIconColumn = document.createElement("aside");
-    actionIconColumn.className = "actionIcon standby " + actionIconColumnClass;
+    actionIconColumn.className = `actionIcon ${actionIconColumnClass}-standby`;
     gameRow.append(actionIconColumn);
 
     //cardColumn
@@ -132,34 +119,6 @@ function initializeGame () {
     cardColumn.className = "cardColumn " + cardColumnClass;
     cardColumn.setAttribute("id", cardColumnId);
     gameRow.append(cardColumn);
-
-    // //sideBar
-    // var sideBarClass = "col-12";
-
-    // var sideBar = document.createElement("div");
-    // sideBar.className = "sideBar " + sideBarClass;
-    // container.append(sideBar);
-
-    // var upperSideBar = document.createElement("div");
-    // upperSideBar.className = "utility upperSideBar";
-    // sideBar.append(upperSideBar);
-
-    // var lowerSideBar = document.createElement("div");
-    // lowerSideBar.className = "utility lowerSideBar";
-    // sideBar.append(lowerSideBar);
-
-
-    // //itemBar
-    // var itemBarClassList = [
-    //     "",
-    //     ""
-    // ];
-
-    // for (i = 0; i < itemBarClassList.length; i++) {
-    //     var itemBar = document.createElement("div");
-    //     itemBar.className = "itemBar " + itemBarClassList[i];
-    //     upperSideBar.append(itemBar);
-    // };
 }
 
 /////////stage DOM //////////////////////////
@@ -293,11 +252,11 @@ function handleClick(event) {
         removeClicker();
         if (firstCardClass === secondCardClass) {
             //cloud Trigger  //make a function out of it and call it.
-            document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("cloud");
+            document.querySelector(".actionIcon").classList.remove(`${character}-standby`);
+            document.querySelector(".actionIcon").classList.add(`${character}-cloud`);
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("cloud");
-                document.querySelector(".actionIcon").classList.add("standby");
+                document.querySelector(".actionIcon").classList.remove(`${character}-cloud`);
+                document.querySelector(".actionIcon").classList.add(`${character}-standby`);
             },800); 
             matches++;
             setTimeout(addClicker,900);
@@ -305,11 +264,11 @@ function handleClick(event) {
             displayStats();
         } else {
             //Sephiroth Trigger   //make a function out of it and call it.
-            document.querySelector(".actionIcon").classList.remove("standby");
-            document.querySelector(".actionIcon").classList.add("seph");
+            document.querySelector(".actionIcon").classList.remove(`${character}-standby`);
+            document.querySelector(".actionIcon").classList.add(`${character}-seph`);
             setTimeout(function () {
-                document.querySelector(".actionIcon").classList.remove("seph");
-                document.querySelector(".actionIcon").classList.add("standby");
+                document.querySelector(".actionIcon").classList.remove(`${character}-seph`);
+                document.querySelector(".actionIcon").classList.add(`${character}-standby`);
             },1400); 
             //
             unhideCard();
@@ -547,9 +506,8 @@ function hideStartModal () {
 }
 
 function characterSelect(event) {
-    felyne = event.currentTarget.classList[event.currentTarget.classList.length - 1];
-    document.querySelector(".lowerSideBar").className = "utility lowerSideBar";
-    document.querySelector(".lowerSideBar").classList.add(felyne);
+    character = event.currentTarget.classList[event.currentTarget.classList.length - 1];
+    document.querySelector(".actionIcon").className = `actionIcon ${character}-standby`
 }
 
 addClicker();

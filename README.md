@@ -16,8 +16,8 @@ Application can be played live at (link)
 
 ## Features
 
-- Users can select desired felyne to start the memory match game.
-- Users can match monster cards.
+- Users can select desired character to start the memory match game.
+- Users can match character cards.
 - Users choose to proceed and restart as each stages are completed.
 - Users can view live statistics of each rounds.
 
@@ -36,7 +36,7 @@ Application can be played live at (link)
 1. You can clone this repository with the following command:
 
     ```shell
-    git clone https://github.com/john-jaihyek-choi/mh-memory-match-game
-    cd mh-memory-match
+    git clone https://github.com/john-jaihyek-choi/ff-memory-match-game
+    cd ff-memory-match
     ```
 1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
