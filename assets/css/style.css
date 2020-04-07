@@ -69,19 +69,19 @@ body {
  }
 
  .stage1Background {
-   background-image: url(../images/midgar-3.jpg);
+   background-image: url(../images/stage-1.gif);
  }
 
  .stage2Background {
-   background-image: url(../images/midgar-1.jpg);
+   background-image: url(../images/stage-2.gif);
  }
 
  .stage3Background {
-   background-image: url(../images/midgar-2.png);
+   background-image: url(../images/stage-3.gif);
  }
 
  .stage4Background {
-   background-image: url(../images/stage4background.jpg);
+   background-image: url(../images/stage-4.gif);
  }
   
 .container {
@@ -159,7 +159,7 @@ body {
  }
   
  .statColumn {
-   height: 20%;
+   height: 16%;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
@@ -176,7 +176,7 @@ body {
  .statBox{
    display: flex;
    justify-content: center;
-   align-items: center;
+   /* align-items: center; */
    border-radius: 10px;
    text-align: center;
    font-size: 1.3em;
