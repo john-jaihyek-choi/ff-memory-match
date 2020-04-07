@@ -1,0 +1,141 @@
+@media only screen and (max-width: 1024px) {
+    .characterSelect {
+        flex-basis: 100%;
+    }
+    .header {
+        justify-content: center;
+        height: 40%;
+    }
+    .headerIntro {
+        font-size: 3rem;
+    }
+    .characterCard {
+        height: 50%;
+    }
+    .statColumn, .actionIcon {
+        height: 13%;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .stage1Card {
+        width: 33%;
+    }
+    .stage2Card {
+        width: 25%;
+    }
+    .stage3Card, .stage4Card {
+        width: 16%;
+    }
+    .stage1Background {
+        background-image: url(../images/stage-1m.gif);
+        background-position: center;
+    }
+    
+    .stage2Background {
+        background-image: url(../images/stage-2m.gif);
+        background-position: center;
+    }
+    
+    .stage3Background {
+        background-image: url(../images/stage-3m.gif);
+        background-position: center;
+    }
+    
+    .stage4Background {
+        background-image: url(../images/stage-4m.gif);
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .statColumn {
+        font-size: 2rem;
+    }
+    .headerIntro {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .characterCard {
+        flex-basis: 72%;
+    }
+    .header {
+        height: 33%;
+    }
+    .characterSelect {
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .characterCard {
+        flex-basis: 80%
+    }
+    .headerIntro {
+        font-size: 1.5rem;
+    }
+    .statColumn, .actionIcon {
+        height: 9%;
+        font-size: 1rem;
+        border-radius: 0px;
+    }
+    .stage1Card {
+        width: 50%;
+        height: 34%;
+    }
+    .stage2Card {
+        width: 33%;
+        height: 25%;
+    }
+    .stage3Card, .stage4Card {
+        width: 26%;
+        height: 17%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        height: 28%;
+    }
+    .characterSelect {
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .characterCard {
+        flex-basis: 81%
+    }
+    .headerIntro {
+        font-size: 1rem;
+    }
+    .statColumn, .actionIcon {
+        height: 9%;
+        font-size: 0.9rem;
+        border-radius: 0px;
+    }
+    .card-front, .card-back {
+        height: 75%;
+        width: 55%;
+    }
+    .stage1Card {
+        width: 50%;
+        height: 35%;
+    }
+    .stage2Card {
+        width: 33%;
+        height: 25%;
+    }
+    .stage3Card, .stage4Card {
+        width: 28%;
+        height: 17%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .statColumn, .actionIcon {
+        font-size: 0.8rem;
+    }   
+}

@@ -13,6 +13,19 @@
    flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 414px) {
+   .startPage {
+       height: 100%;
+       background-image: url(../images/ff-startpage-m.png);
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       display: flex;
+       flex-direction: row-reverse;
+       flex-wrap: wrap;
+   }
+}
+
 .characterSelect {
    display: flex;
    justify-content: flex-end;
@@ -70,18 +83,22 @@ body {
 
  .stage1Background {
    background-image: url(../images/stage-1.gif);
+   background-position: center;
  }
 
  .stage2Background {
    background-image: url(../images/stage-2.gif);
+   background-position: center;
  }
 
  .stage3Background {
    background-image: url(../images/stage-3.gif);
+   background-position: center;
  }
 
  .stage4Background {
    background-image: url(../images/stage-4.gif);
+   background-position: center;
  }
   
 .container {
@@ -142,13 +159,6 @@ body {
    width: 96%;
 }
   
- /* .headerRow {
-   height: 6%;
-   font-size: 3em;
-   text-align: center;
-   font-weight: bold;
- } */
-  
  .gameRow {
    height: 95%;
    display: flex;
@@ -168,7 +178,7 @@ body {
    background-size: 100% 100%;
    background-repeat: no-repeat;
    font-family: "FFFont";
-   font-size: 2rem;
+   font-size: 2.5rem;
    color: white;
    border-radius: 8px;
  }
@@ -176,7 +186,6 @@ body {
  .statBox{
    display: flex;
    justify-content: center;
-   /* align-items: center; */
    border-radius: 10px;
    text-align: center;
    font-size: 1.3em;
