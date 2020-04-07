@@ -326,33 +326,31 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage I. Would you like to proceed to the next stage?";
+            modalContent1.textContent = "Congratulations, You have completed Stage I.";
             modalDiv.appendChild(modalContent1);
 
-            // var modalContent2 = document.createElement("p");
-            // modalContent2.textContent = "Would you like to proceed to the next stage?";
-            // modalDiv.appendChild(modalContent2);
+            var modalContent2 = document.createElement("p");
+            modalContent2.textContent = "Would you like to proceed to the next stage?";
+            modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
             modalButton.className = "modal-button";
 
-            var modalButtonRestart = document.createElement("button");
-            modalButton.appendChild(modalButtonRestart);
+            var modalButtonRestart = document.createElement("h4");
+            modalButtonRestart.textContent = "Restart";
             modalButtonRestart.className = "restart";
-            var modalButtonRestartContent = document.querySelector("button.restart");
-            modalButtonRestartContent.innerHTML = "I Give Up";
+            modalButton.appendChild(modalButtonRestart);
 
-            var modalButtonNextStage = document.createElement("button");
-            modalButton.appendChild(modalButtonNextStage);
+            var modalButtonNextStage = document.createElement("h4");
+            modalButtonNextStage.textContent = "Proceed";
             modalButtonNextStage.className = "nextStage";
-            var modalButtonNextStageContent = document.querySelector("button.nextStage");
-            modalButtonNextStageContent.innerHTML = "Let's Go!";
+            modalButton.appendChild(modalButtonNextStage);
 
             document.querySelector(".modal-box").classList.remove("hidden");
-            document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stageCall);
-            document.querySelector("button.nextStage").addEventListener("click", addClicker);
+            document.querySelector("h4.restart").addEventListener("click", hideModalRestart);
+            document.querySelector("h4.nextStage").addEventListener("click", stageCall);
+            document.querySelector("h4.nextStage").addEventListener("click", addClicker);
             break;
         case 2:
             var modalBox = document.createElement("div");
@@ -364,33 +362,31 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage II. Would you like to proceed to the next stage?";
+            modalContent1.textContent = "Congratulations, You have completed Stage II.";
             modalDiv.appendChild(modalContent1);
 
-            // var modalContent2 = document.createElement("p");
-            // modalContent2.textContent = "Would you like to proceed to the next stage?";
-            // modalDiv.appendChild(modalContent2);
+            var modalContent2 = document.createElement("p");
+            modalContent2.textContent = "Would you like to proceed to the next stage?";
+            modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
             modalButton.className = "modal-button";
 
-            var modalButtonRestart = document.createElement("button");
-            modalButton.appendChild(modalButtonRestart);
+            var modalButtonRestart = document.createElement("h4");
+            modalButtonRestart.textContent = "Restart";
             modalButtonRestart.className = "restart";
-            var modalButtonRestartContent = document.querySelector("button.restart");
-            modalButtonRestartContent.innerHTML = "I Give Up";
+            modalButton.appendChild(modalButtonRestart);
 
-            var modalButtonNextStage = document.createElement("button");
-            modalButton.appendChild(modalButtonNextStage);
+            var modalButtonNextStage = document.createElement("h4");
+            modalButtonNextStage.textContent = "Proceed";
             modalButtonNextStage.className = "nextStage";
-            var modalButtonNextStageContent = document.querySelector("button.nextStage");
-            modalButtonNextStageContent.innerHTML = "Let's Go!";
+            modalButton.appendChild(modalButtonNextStage);
 
             document.querySelector(".modal-box").classList.remove("hidden");
-            document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stageCall);
-            document.querySelector("button.nextStage").addEventListener("click", addClicker);
+            document.querySelector("h4.restart").addEventListener("click", hideModalRestart);
+            document.querySelector("h4.nextStage").addEventListener("click", stageCall);
+            document.querySelector("h4.nextStage").addEventListener("click", addClicker);
             break;
         case 3:
             var modalBox = document.createElement("div");
@@ -402,33 +398,31 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed Stage III. Would you like to proceed to the final stage?";
+            modalContent1.textContent = "Congratulations, You have completed Stage III.";
             modalDiv.appendChild(modalContent1);
 
-            // var modalContent2 = document.createElement("p");
-            // modalContent2.textContent = "Would you like to proceed to the next stage?";
-            // modalDiv.appendChild(modalContent2);
+            var modalContent2 = document.createElement("p");
+            modalContent2.textContent = "Would you like to proceed to the next stage?";
+            modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
             modalButton.className = "modal-button";
 
-            var modalButtonRestart = document.createElement("button");
-            modalButton.appendChild(modalButtonRestart);
+            var modalButtonRestart = document.createElement("h4");
+            modalButtonRestart.textContent = "Restart";
             modalButtonRestart.className = "restart";
-            var modalButtonRestartContent = document.querySelector("button.restart");
-            modalButtonRestartContent.innerHTML = "I Give Up";
+            modalButton.appendChild(modalButtonRestart);
 
-            var modalButtonNextStage = document.createElement("button");
-            modalButton.appendChild(modalButtonNextStage);
+            var modalButtonNextStage = document.createElement("h4");
+            modalButtonNextStage.textContent = "Proceed";
             modalButtonNextStage.className = "nextStage";
-            var modalButtonNextStageContent = document.querySelector("button.nextStage");
-            modalButtonNextStageContent.innerHTML = "Let's Go!";
+            modalButton.appendChild(modalButtonNextStage);
 
             document.querySelector(".modal-box").classList.remove("hidden");
-            document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            document.querySelector("button.nextStage").addEventListener("click", stageCall);
-            document.querySelector("button.nextStage").addEventListener("click", addClicker);
+            document.querySelector("h4.restart").addEventListener("click", hideModalRestart);
+            document.querySelector("h4.nextStage").addEventListener("click", stageCall);
+            document.querySelector("h4.nextStage").addEventListener("click", addClicker);
             break;
         case 4:
             var modalBox = document.createElement("div");
@@ -440,34 +434,20 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations! You have completed all stages!";
+            modalContent1.textContent = "Congratulations, You have completed all stages!";
             modalDiv.appendChild(modalContent1);
-
-            // var modalContent2 = document.createElement("p");
-            // modalContent2.textContent = "Would you like to proceed to the next stage?";
-            // modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
             modalButton.className = "modal-button";
 
-            var modalButtonRestart = document.createElement("button");
-            modalButton.appendChild(modalButtonRestart);
+            var modalButtonRestart = document.createElement("h4");
+            modalButtonRestart.textContent = "Restart";
             modalButtonRestart.className = "restart";
-            var modalButtonRestartContent = document.querySelector("button.restart");
-            modalButtonRestartContent.innerHTML = "Play Again";
-
-            // var modalButtonNextStage = document.createElement("button");
-            // modalButton.appendChild(modalButtonNextStage);
-            // modalButtonNextStage.className = "nextStage";
-            // var modalButtonNextStageContent = document.querySelector("button.nextStage");
-            // modalButtonNextStageContent.innerHTML = "Let's Go!";
+            modalButton.appendChild(modalButtonRestart);
 
             document.querySelector(".modal-box").classList.remove("hidden");
-            document.querySelector("button.restart").addEventListener("click", hideModalRestart);
-            // document.querySelector("button.nextStage").addEventListener("click", stageCall);
-            // document.querySelector("button.nextStage").addEventListener("click", addClicker);
-            break;
+            document.querySelector("h4.restart").addEventListener("click", hideModalRestart);            break;
         default:
             break;
     }
