@@ -1,81 +1,85 @@
+.card-back {
+    background-image: url(../images/cards/cardback-1.jpg);
+    background-size: contain;
+ }
 .card-zangan{
-    background-image: url(../images/Stage1/card-zangan.png);
+    background-image: url(../images/cards/Stage1/card-zangan.png);
 } 
 .card-black-mage{
-    background-image: url(../images/Stage1/card-black-mage.png);
+    background-image: url(../images/cards/Stage1/card-black-mage.png);
 } 
 .card-evoker{
-    background-image: url(../images/Stage1/card-evoker.png);
+    background-image: url(../images/cards/Stage1/card-evoker.png);
 }
 .card-aerith {
-    background-image: url(../images/Stage2/card-aerith.jpg);
+    background-image: url(../images/cards/Stage2/card-aerith.jpg);
 } 
 .card-barret-1{
-    background-image: url(../images/Stage2/card-barret-1.jpg);
+    background-image: url(../images/cards/Stage2/card-barret-1.jpg);
 }
 .card-gadot{
-    background-image: url(../images/Stage2/card-gadot.png);
+    background-image: url(../images/cards/Stage2/card-gadot.png);
 } 
 .card-jessie{
-    background-image: url(../images/Stage2/card-jessie.png);
+    background-image: url(../images/cards/Stage2/card-jessie.png);
 } 
 .card-redxiii{
-    background-image: url(../images/Stage2/card-redxiii.png);
+    background-image: url(../images/cards/Stage2/card-redxiii.png);
 } 
 .card-tifa {
-    background-image: url(../images/Stage2/card-tifa.png);
+    background-image: url(../images/cards/Stage2/card-tifa.png);
 }
 .card-angeal {
-    background-image: url(../images/Stage3/card-angeal.jpg);
+    background-image: url(../images/cards/Stage3/card-angeal.jpg);
 }
 .card-cloud-5{
-    background-image: url(../images/Stage3/card-cloud-5.jpg);
+    background-image: url(../images/cards/Stage3/card-cloud-5.jpg);
 } 
 .card-genesis{
-    background-image: url(../images/Stage3/card-genesis.jpg);
+    background-image: url(../images/cards/Stage3/card-genesis.jpg);
 } 
 .card-cloud-8{
-    background-image: url(../images/Stage3/card-cloud-8.jpg);
+    background-image: url(../images/cards/Stage3/card-cloud-8.jpg);
 } 
 .card-reno{
-    background-image: url(../images/Stage3/card-reno.jpg);
+    background-image: url(../images/cards/Stage3/card-reno.jpg);
 } 
 .card-rufus{
-    background-image: url(../images/Stage3/card-rufus.jpg);
+    background-image: url(../images/cards/Stage3/card-rufus.jpg);
 } 
 .card-vincent-1{
-    background-image: url(../images/Stage3/card-vincent-1.jpg);
+    background-image: url(../images/cards/Stage3/card-vincent-1.jpg);
 } 
 .card-yuffie{
-    background-image: url(../images/Stage3/card-yuffie.jpg);
+    background-image: url(../images/cards/Stage3/card-yuffie.jpg);
 } 
 .card-zack-1{
-    background-image: url(../images/Stage3/card-zack-1.jpg);
+    background-image: url(../images/cards/Stage3/card-zack-1.jpg);
 }
 .card-cloud-1{
-    background-image: url(../images/Stage4/card-cloud-1.jpg);
+    background-image: url(../images/cards/Stage4/card-cloud-1.jpg);
 } 
 .card-cloud-3{
-    background-image: url(../images/Stage4/card-cloud-3.jpg);
+    background-image: url(../images/cards/Stage4/card-cloud-3.jpg);
 } 
 .card-sephiroth-2{
-    background-image: url(../images/Stage4/card-sephiroth-2.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth-2.jpg);
 } 
 .card-sephiroth-3{
-    background-image: url(../images/Stage4/card-sephiroth-3.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth-3.jpg);
 } 
 .card-sephiroth-4{
-    background-image: url(../images/Stage4/card-sephiroth-4.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth-4.jpg);
 } 
 .card-sephiroth-5{
-    background-image: url(../images/Stage4/card-sephiroth-5.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth-5.jpg);
 } 
 .card-sephiroth{
-    background-image: url(../images/Stage4/card-sephiroth.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth.jpg);
 }
 .card-cloud-4 {
-    background-image: url(../images/Stage4/card-cloud-4.jpg);
+    background-image: url(../images/cards/Stage4/card-cloud-4.jpg);
 }
 .card-sephiroth-1 {
-    background-image: url(../images/Stage4/card-sephiroth-1.jpg);
+    background-image: url(../images/cards/Stage4/card-sephiroth-1.jpg);
 }

@@ -1,29 +1,27 @@
-/* cloud-normal */
- .original-standby {
-   height: 16%;
-   flex-basis: 45%;
-   border-radius: 10px;
-   background: url(../images/sephiroth-standby-2.gif),
-      url(../images/cloud-standby-2r.gif);
-   background-size: 
-      40%,
-      32%,
-      contain;
-   background-repeat: 
-      no-repeat,
-      no-repeat;
-   background-position: 
-      107% 94%,
-      24% 96%,
-      left -40px;
- }
-
- .original-cloud { 
+.original-standby {
     height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/cloud-action-8s0.5.gif),
-        url(../images/sephiroth-standby-2.gif);
+    background: url(../images/actionGif/sephiroth-standby-2.gif),
+        url(../images/actionGif/cloud-standby-2r.gif);
+    background-size: 
+        40%,
+        32%,
+        contain;
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-position: 
+        107% 94%,
+        24% 96%,
+        left -40px;
+}
+.original-cloud { 
+    height: 16%;
+    flex-basis: 45%;
+    border-radius: 10px;
+    background: url(../images/actionGif/cloud-action-8s0.5.gif),
+        url(../images/actionGif/sephiroth-standby-2.gif);
     background-size: 
         69%,
         40%;
@@ -34,13 +32,13 @@
         13% 60%,
         107% 94%;
 }
- 
+
 .original-seph {
     height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/sephiroth-action-1st.gif),
-        url(../images/cloud-standby-2r.gif);
+    background: url(../images/actionGif/sephiroth-action-1st.gif),
+        url(../images/actionGif/cloud-standby-2r.gif);
     background-size: 
         150%,
         32%,
@@ -53,31 +51,28 @@
         24% 96%,
         left -40px;
 }
-
-/* cloud-kh */
 .kh-standby {
     height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/sephiroth-standby-2.gif),
-       url(../images/cloud-kh-standby.gif);
+    background: url(../images/actionGif/sephiroth-standby-2.gif),
+        url(../images/actionGif/cloud-kh-standby.gif);
     background-size: 
-       40%,
-       40%;
+        40%,
+        40%;
     background-repeat: 
-       no-repeat,
-       no-repeat;
+        no-repeat,
+        no-repeat;
     background-position: 
-       107% 94%,
-       0% 96%;
-  }
-
+        107% 94%,
+        0% 96%;
+}
 .kh-cloud { 
     height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/cloud-kh-action-1.3s.gif),
-        url(../images/sephiroth-standby-2.gif);
+    background: url(../images/actionGif/cloud-kh-action-1.3s.gif),
+        url(../images/actionGif/sephiroth-standby-2.gif);
     background-size: 
         120%,
         40%;
@@ -92,15 +87,15 @@
     height: 16%;
     flex-basis: 45%;
     border-radius: 10px;
-    background: url(../images/sephiroth-action-1st.gif),
-       url(../images/cloud-kh-standby.gif);
+    background: url(../images/actionGif/sephiroth-action-1st.gif),
+        url(../images/actionGif/cloud-kh-standby.gif);
     background-size: 
-       150%,
-       40%;
+        150%,
+        40%;
     background-repeat: 
-       no-repeat,
-       no-repeat;
+        no-repeat,
+        no-repeat;
     background-position: 
-       70% 80%,
-       0% 96%;
+        70% 80%,
+        0% 96%;
 }
