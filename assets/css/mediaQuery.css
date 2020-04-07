@@ -61,22 +61,22 @@
         border-radius: 0px;
     }
     .stage1Background {
-        background-image: url(../images/stage-1.gif);
+        background-image: url(../images/backgrounds/stage-1.gif);
         background-position: center;
     }
     
     .stage2Background {
-        background-image: url(../images/stage-2.gif);
+        background-image: url(../images/backgrounds/stage-2.gif);
         background-position: center;
     }
     
     .stage3Background {
-        background-image: url(../images/stage-3.gif);
+        background-image: url(../images/backgrounds/stage-3.gif);
         background-position: center;
     }
     
     .stage4Background {
-        background-image: url(../images/stage-4.gif);
+        background-image: url(../images/backgrounds/stage-4.gif);
         background-position: center;
     }
     .modal-button {
@@ -135,21 +135,21 @@
         height: 29%;
     }
     .stage1Background {
-        background-image: url(../images/stage-1m.gif);
+        background-image: url(../images/backgrounds/stage-1m.gif);
         background-position: center;
     }
     .stage2Background {
-        background-image: url(../images/stage-2m.gif);
+        background-image: url(../images/backgrounds/stage-2m.gif);
         background-position: center;
     }
     
     .stage3Background {
-        background-image: url(../images/stage-3m.gif);
+        background-image: url(../images/backgrounds/stage-3m.gif);
         background-position: center;
     }
     
     .stage4Background {
-        background-image: url(../images/stage-4m.gif);
+        background-image: url(../images/backgrounds/stage-4m.gif);
         background-position: center;
     }
 }

@@ -54,7 +54,7 @@
 
 .startPage {
    height: 100%;
-   background-image: url(../images/ff-startpage.jpg);
+   background-image: url(../images/backgrounds/ff-startpage.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    display: flex;
@@ -65,7 +65,7 @@
 @media only screen and (max-width: 414px) {
    .startPage {
       height: 100%;
-      background-image: url(../images/ff-startpage-m.png);
+      background-image: url(../images/backgrounds/ff-startpage-m.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -91,22 +91,22 @@
 }
 
 .original {
-   background-image: url(../images/final-fantasy-logo.png);
+   background-image: url(../images/logo/final-fantasy-logo.png);
 }
 
 .kh {
-   background-image: url(../images/final-fantasy-kh-logo.png);
+   background-image: url(../images/logo/final-fantasy-kh-logo.png);
 }
 
 .original:hover {
-   background-image: url(../images/cloud-seph-1.png);
+   background-image: url(../images/character/cloud-seph-1.png);
    transform: scale(1.05);
    transition: transform 1s;
    cursor: pointer;
 }
 
 .kh:hover {
-   background-image: url(../images/cloud-seph-2.png);
+   background-image: url(../images/character/cloud-seph-2.png);
    transform: scale(1.05);
    transition: transform 1s;
    cursor: pointer;
@@ -182,7 +182,7 @@ body {
    flex-wrap: wrap;
    flex-direction: row;
    flex-basis: 50%;
-   background-image: url(../images/inventory.png);
+   background-image: url(../images/etc/inventory.png);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    font-size: 2.5rem;
@@ -278,7 +278,7 @@ body {
    justify-content: center;
    align-items: center;
    border-radius: 10px;
-   background-image: url(../images/type-3.png);
+   background-image: url(../images/etc/type-3.png);
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
