@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1366px) {
+    .characterCard {
+        flex-basis: 45%;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .characterSelect {
         flex-basis: 100%;
@@ -50,12 +56,101 @@
     }
 }
 
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+    .headerIntro {
+        font-size: 2rem;
+    }
+    .statColumn {
+        font-size: 1.5rem;
+        border-radius: 0px;
+    }
+    .stage1Background {
+        background-image: url(../images/stage-1.gif);
+        background-position: center;
+    }
+    
+    .stage2Background {
+        background-image: url(../images/stage-2.gif);
+        background-position: center;
+    }
+    
+    .stage3Background {
+        background-image: url(../images/stage-3.gif);
+        background-position: center;
+    }
+    
+    .stage4Background {
+        background-image: url(../images/stage-4.gif);
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 823px) and (max-height: 411px) {
+    .headerIntro {
+        font-size: 1.6rem;
+    }
+    .statColumn, .actionIcon {
+        font-size: 1.2rem;
+        height: 22%;
+    }
+    .stage2Card {
+        width: 16%;
+        height: 42%;
+    }
+}
+
+@media only screen and (max-width: 812px) and (max-height: 375px) {
+    .headerIntro {
+        font-size: 1.5rem;
+    }
+    .statColumn, .actionIcon {
+        font-size: 1.2rem;
+        height: 22%;
+    }
+    .stage2Card {
+        width: 16%;
+        height: 42%;
+    }
+    .characterSelect {
+        height: 50%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .statColumn {
         font-size: 2rem;
     }
     .headerIntro {
         font-size: 2rem;
+    }
+    .characterSelect {
+        height: 50%;
+    }
+    .stage2Card {
+        width: 16%;
+        height: 35%;
+    }
+    .stage3Card, .stage4Card {
+        height: 29%;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .headerIntro {
+        font-size: 1.3rem;
+    }
+    .statColumn, .actionIcon {
+        font-size: 1.2rem;
+        height: 22%;
+    }
+}
+
+@media only screen and (max-width: 568px) and (max-height: 320px) {
+    .headerIntro {
+        font-size: 1.1rem;
+    }
+    .statColumn {
+        font-size: 1.1rem;
     }
 }
 
