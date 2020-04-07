@@ -68,6 +68,8 @@
 }
 
 .headerIntro {
+   display: flex;
+   flex-direction: column-reverse;
    text-align: center;
    font-family: "FFFont";
    font-size: 2rem;
