@@ -349,19 +349,12 @@ body {
    transition: transform .2s;
 }
 
-/* .modal-button > * {
-   color: white;
-   font-size: 3rem;
-   font-weight: bold;
-} */
-
 .modal-content {
    position: fixed;
    display: wrap;
    flex-wrap: wrap;
-   width: 30%;
+   width: 36%;
    height: 11%;
-   left: 35%;
    top: 43%;
    justify-content: center;
    align-items: center;
