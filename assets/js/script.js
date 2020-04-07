@@ -126,8 +126,9 @@ function initializeGame () {
 function stageCall (currentStage) {
     // var currentStage = stage;
     currentStage = stage;
+    document.createElement('span').textContent = " %";
     document.getElementById("attempts").firstElementChild.textContent = attempts;
-    document.getElementById("accuracy").firstElementChild.textContent = 0 + " %";
+    document.getElementById("accuracy").firstElementChild.textContent = 0;
     repopulateCardColumn();
 
     if(currentStage > 1) {
@@ -202,7 +203,7 @@ function displayStats() {
 };
 
 function calculateAccuracy(attempts, matches) {
-    return (matches / attempts * 100).toFixed(2) + "%";
+    return (matches / attempts * 100).toFixed(2);
 };
 
 function addTotalGames() {
@@ -478,7 +479,7 @@ function hideModalRestart() {
     stage = 1;
     document.getElementById("stage").firstElementChild.textContent = stage;
     document.getElementById("attempts").firstElementChild.textContent = 0;
-    document.getElementById("accuracy").firstElementChild.textContent = 0 + "%";
+    document.getElementById("accuracy").firstElementChild.textContent = 0;
     stageCall(stage);
     addClicker();
     document.querySelector(".startPage").className = "startPage";
