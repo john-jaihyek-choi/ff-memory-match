@@ -39,4 +39,4 @@ Application can be played live [here](https://ff-memory-match.johnjhc.com)
     git clone https://github.com/john-jaihyek-choi/ff-memory-match
     cd ff-memory-match
     ```
-1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
+2. Once you navigate to repo, open the index.html on your browser to get the application running.
