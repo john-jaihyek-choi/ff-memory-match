@@ -12,7 +12,7 @@ A Final Fantasy VII themed memory match game that dynamically creates card board
 
 ## Live Demo
 
-Application can be played live at (link)
+Application can be played live [here](https://ff-memory-match.johnjhc.com)
 
 ## Features
 
@@ -23,7 +23,7 @@ Application can be played live at (link)
 
 ## Preview
 
-![mm-preview-min](https://user-images.githubusercontent.com/57784907/76573358-db84fb80-6478-11ea-8508-06ecd7769122.gif)
+![mm-preview-min](https://user-images.githubusercontent.com/57784907/78731438-95467f00-78f4-11ea-8191-fa5a1e1c7b8b.gif)
 
 ## Development
 
