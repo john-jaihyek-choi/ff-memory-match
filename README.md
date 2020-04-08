@@ -2,6 +2,10 @@
 
 A Final Fantasy VII themed memory match game that dynamically creates card board as user progresses through each stages.
 
+## Live Demo
+
+Application can be played live [here](https://ff-memory-match.johnjhc.com)
+
 ## Technologies Used
 
 - HTML5
@@ -9,10 +13,6 @@ A Final Fantasy VII themed memory match game that dynamically creates card board
 - JavaScript
 - jQuery
 - Media Queries
-
-## Live Demo
-
-Application can be played live [here](https://ff-memory-match.johnjhc.com)
 
 ## Features
 
