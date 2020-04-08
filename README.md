@@ -36,7 +36,7 @@ Application can be played live [here](https://ff-memory-match.johnjhc.com)
 1. You can clone this repository with the following command:
 
     ```shell
-    git clone https://github.com/john-jaihyek-choi/ff-memory-match-game
+    git clone https://github.com/john-jaihyek-choi/ff-memory-match
     cd ff-memory-match
     ```
 1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
