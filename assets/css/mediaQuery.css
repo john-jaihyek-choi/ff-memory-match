@@ -49,6 +49,12 @@
     .stage3Card, .stage4Card {
         width: 16%;
     }
+    .modal-box {
+        width: 55%;
+        height: 16%;
+        top: 38%;
+        font-size: 4.4vw;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
@@ -77,6 +83,11 @@
     .stage4Background {
         background-image: url(../images/backgrounds/stage-4.gif);
         background-position: center;
+    }
+    .modal-box {
+        width: 40%;
+        height: 30%;
+        font-size: 2.5vw;
     }
 }
 
@@ -109,6 +120,11 @@
     }
     .characterSelect {
         height: 50%;
+    }
+    .modal-box {
+        width: 47%;
+        height: 38%;
+        font-size: 3.5vw;
     }
 }
 
@@ -203,6 +219,15 @@
         width: 26%;
         height: 17%;
     }
+    .modal-box {
+        width: 95%;
+        height: 21%;
+        font-size: 7.5vw;
+        top: 38%;
+    }
+    .modal-button {
+        top: 5.3vw;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -240,6 +265,12 @@
     .stage3Card, .stage4Card {
         width: 28%;
         height: 17%;
+    }
+    .modal-box {
+        height: 20%;
+    }
+    .modal-button {
+        top: 5vw;
     }
 }
 

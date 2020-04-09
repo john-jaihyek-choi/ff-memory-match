@@ -434,7 +434,7 @@ function showModal() {
             var modalContent2 = document.createElement("br");
             modalContent1.append("Congratulations, You have completed all stages");
             modalContent1.append(modalContent2)
-            modalContent1.append('If you wish to restart, please click the button below')
+            modalContent1.append('Click restart to play again')
             modalDiv.appendChild(modalContent1);
 
             var modalButton = document.createElement("div");
