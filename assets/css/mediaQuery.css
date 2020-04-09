@@ -63,6 +63,12 @@
     }
 }
 
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+    .statBox {
+        font-size: 1.2em;
+    }
+}
+
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
     .headerIntro {
         font-size: 2rem;
@@ -97,9 +103,9 @@
     }
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
     .statBox {
-        font-size: 1.2em;
+        font-size: 0.7em;
     }
 }
 
@@ -177,6 +183,12 @@
     .stage4Background {
         background-image: url(../images/backgrounds/stage-4m.gif);
         background-position: center;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 317px) {
+    .statBox{
+        font-size: 0.7em;
     }
 }
 
