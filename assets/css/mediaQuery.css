@@ -1,3 +1,17 @@
+@media only screen and (max-height: 900px) {
+    .modal-box{
+        height: 38%;
+        top: 28%;
+    }
+}
+
+@media only screen and (max-height: 695px) {
+    .modal-box{
+        height: 86%;
+        top: 8%;
+    }
+}
+
 @media only screen and (max-width: 1366px) {
     .characterCard {
         flex-basis: 45%;
