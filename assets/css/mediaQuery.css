@@ -55,6 +55,9 @@
         top: 38%;
         font-size: 4.1vw;
     }
+    .statBox {
+        font-size: 1em;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
@@ -186,6 +189,24 @@
         font-size: 1.1rem;
     }
     .statColumn {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 568px) and (max-height: 900px) {
+    .statColumn {
+        height: 17%;
+    }
+    .statBox {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 568px) and (max-height: 600px) {
+    .statColumn {
+        height: 20%;
+    }
+    .statBox {
         font-size: 1.1rem;
     }
 }
