@@ -50,6 +50,8 @@
    margin: 0;
    padding: 0;
    font-family: "FFFont";
+   font-weight: bold;
+   text-shadow: 5px 5px 8px black;
 }
 
 .startPage {
@@ -128,7 +130,6 @@
    text-align: center;
    font-size: 2rem;
    color: rgba(255, 255, 255, 0.886);
-   text-shadow: 5px 5px 8px black;
 }
 
 body {
@@ -269,65 +270,56 @@ body {
 
 .modal-box {
    position: fixed;
-   display: wrap;
-   flex-wrap: wrap;
-   width: 35%;
-   height: 40%;
-   left: 32%;
-   top: 25%;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
+   width: 40%;
+   height: 30%;
    background-image: url(../images/etc/type-3.png);
-   background-repeat: no-repeat;
-   background-size: contain;
+   background-size: 100%;
    background-position: center;
+   background-repeat: no-repeat;
+   top: 35%;
+   display: flex;
+   flex-wrap: wrap;
+   color: white;
    text-align: center;
-   padding-top: 33%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
+   font-size: 2.5vw;
+}
+
+.modal-content {
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   flex-basis: 100%;
+   padding: 0 5%;
+   bottom: 1vw;
+   align-items: flex-end;
+   justify-content: center;
 }
 
 .modal-button {
-   position: fixed;
-   width: 35%;
-   top: 48%;
-   padding-top: 35%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
    display: flex;
-   justify-content: space-evenly;
-   color: white;
-   font-size: 3rem;
-   font-weight: bold;
+   position: relative;
+   flex-basis: 100%;
+   padding: 0 5%;
+   top: 2.8vw;
+}
+
+.modal-button > * {
+   flex-basis: 50%;
+}
+
+.modal-button > .backToMain {
+   flex-basis: 100%;
+   top: 3.8vw;
+}
+
+.modal-button > .restart {
+
 }
 
 .modal-button > *:hover {
    cursor: pointer;
    transform: scale(1.1);
    transition: transform .2s;
-}
-
-.modal-content {
-   position: fixed;
-   display: wrap;
-   flex-wrap: wrap;
-   width: 36%;
-   height: 11%;
-   top: 43%;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
-   text-align: center;
-   padding-top: 29%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
-   font-size: 3rem;
-   font-weight: bold;
-   color: white;
 }
 
 .hidden {
