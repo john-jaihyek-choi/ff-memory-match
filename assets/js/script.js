@@ -361,12 +361,11 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations, You have completed Stage II.";
+            var modalContent2 = document.createElement("br");
+            modalContent1.append("Congratulations, You have completed Stage II.");
+            modalContent1.append(modalContent2)
+            modalContent1.append('Would you like to proceed to the next stage')
             modalDiv.appendChild(modalContent1);
-
-            var modalContent2 = document.createElement("p");
-            modalContent2.textContent = "Would you like to proceed to the next stage?";
-            modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
@@ -397,12 +396,11 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations, You have completed Stage III.";
+            var modalContent2 = document.createElement("br");
+            modalContent1.append("Congratulations, You have completed Stage III.");
+            modalContent1.append(modalContent2)
+            modalContent1.append('Would you like to proceed to the next stage')
             modalDiv.appendChild(modalContent1);
-
-            var modalContent2 = document.createElement("p");
-            modalContent2.textContent = "Would you like to proceed to the next stage?";
-            modalDiv.appendChild(modalContent2);
 
             var modalButton = document.createElement("div");
             document.querySelector(".modal-box").appendChild(modalButton);
@@ -433,7 +431,10 @@ function showModal() {
             modalDiv.className = "modal-content";
 
             var modalContent1 = document.createElement("p");
-            modalContent1.textContent = "Congratulations, You have completed all stages!";
+            var modalContent2 = document.createElement("br");
+            modalContent1.append("Congratulations, You have completed all stages");
+            modalContent1.append(modalContent2)
+            modalContent1.append('If you wish to restart, please click the button below')
             modalDiv.appendChild(modalContent1);
 
             var modalButton = document.createElement("div");
@@ -442,11 +443,11 @@ function showModal() {
 
             var modalButtonRestart = document.createElement("h4");
             modalButtonRestart.textContent = "Restart";
-            modalButtonRestart.className = "restart";
+            modalButtonRestart.className = "backToMain";
             modalButton.appendChild(modalButtonRestart);
 
             document.querySelector(".modal-box").classList.remove("hidden");
-            document.querySelector("h4.restart").addEventListener("click", hideModalRestart);            break;
+            document.querySelector("h4.backToMain").addEventListener("click", hideModalRestart);            break;
         default:
             break;
     }

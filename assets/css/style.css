@@ -50,6 +50,7 @@
    margin: 0;
    padding: 0;
    font-family: "FFFont";
+   text-shadow: 5px 5px 8px black;
 }
 
 .startPage {
@@ -128,7 +129,6 @@
    text-align: center;
    font-size: 2rem;
    color: rgba(255, 255, 255, 0.886);
-   text-shadow: 5px 5px 8px black;
 }
 
 body {
@@ -289,13 +289,9 @@ body {
    position: relative;
    flex-basis: 100%;
    padding: 0 5%;
-   top: 3vw;
+   bottom: 1vw;
    align-items: flex-end;
-   text-align: center;
-}
-
-.modal-content > * {
-   /* flex-basis: 95%; */
+   justify-content: center;
 }
 
 .modal-button {
@@ -310,74 +306,20 @@ body {
    flex-basis: 50%;
 }
 
+.modal-button > .backToMain {
+   flex-basis: 100%;
+   top: 3.8vw;
+}
+
+.modal-button > .restart {
+
+}
+
 .modal-button > *:hover {
    cursor: pointer;
    transform: scale(1.1);
    transition: transform .2s;
 }
-
-/* .modal-box {
-   position: fixed;
-   display: wrap;
-   flex-wrap: wrap;
-   width: 35%;
-   height: 40%;
-   left: 32%;
-   top: 25%;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
-   background-image: url(../images/etc/type-3.png);
-   background-repeat: no-repeat;
-   background-size: contain;
-   background-position: center;
-   text-align: center;
-   padding-top: 33%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
-} */
-
-/* .modal-button {
-   position: fixed;
-   width: 35%;
-   top: 48%;
-   padding-top: 35%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
-   display: flex;
-   justify-content: space-evenly;
-   color: white;
-   font-size: 3rem;
-   font-weight: bold;
-} */
-
-/* .modal-button > *:hover {
-   cursor: pointer;
-   transform: scale(1.1);
-   transition: transform .2s;
-}
-
-.modal-content {
-   position: fixed;
-   display: wrap;
-   flex-wrap: wrap;
-   width: 36%;
-   height: 11%;
-   top: 43%;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
-   text-align: center;
-   padding-top: 29%;
-   padding-bottom: 33%;
-   margin-top: -33%;
-   margin-bottom: -33%;
-   font-size: 3rem;
-   font-weight: bold;
-   color: white;
-} */
 
 .hidden {
    display: none;
