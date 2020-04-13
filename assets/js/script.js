@@ -161,7 +161,7 @@ function stageCall (currentStage) {
     maxMatches = stageImg[currentStage].length / matchPair;
 
     //shuffles cards at the start of each stage
-    shuffle(stageImg[currentStage]);
+    // shuffle(stageImg[currentStage]);
     
     matches = 0;
     
