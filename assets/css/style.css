@@ -102,15 +102,11 @@
 
 .original:hover {
    background-image: url(../images/character/cloud-seph-1.png);
-   transform: scale(1.05);
-   transition: transform 1s;
    cursor: pointer;
 }
 
 .kh:hover {
    background-image: url(../images/character/cloud-seph-2.png);
-   transform: scale(1.05);
-   transition: transform 1s;
    cursor: pointer;
 }
 
@@ -178,7 +174,7 @@ body {
 }
   
 .statColumn {
-   height: 19%;
+   height: 21%;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
@@ -202,6 +198,11 @@ body {
 .statBox:first-child {
    height: 30%;
    flex-basis: 100%;
+   padding-top: 0.8vh;
+}
+
+.statBox:first-child > {
+   vertical-align: baseline;
 }
 
 .scoreHead {
@@ -215,7 +216,7 @@ body {
 }
 
 .cardColumn {
-   height: 80%;
+   height: 76%;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;

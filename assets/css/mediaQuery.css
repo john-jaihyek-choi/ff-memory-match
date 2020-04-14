@@ -15,6 +15,15 @@
     }
 }
 
+@media only screen and (max-width: 1600px) {
+    .original-standby, .original-seph, .original-cloud{
+        height: 20%;
+    }
+    .kh-standby, .original-seph, .original-cloud{
+        height: 20%;
+    }
+}
+
 @media only screen and (max-width: 1366px) {
     .characterCard {
         flex-basis: 45%;
@@ -37,6 +46,7 @@
     }
     .statColumn, .actionIcon {
         height: 17%;
+        font-size: 1.5rem;
     }
     .card {
         display: flex;
