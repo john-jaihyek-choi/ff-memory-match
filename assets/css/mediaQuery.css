@@ -15,12 +15,15 @@
     }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1610px) {
     .original-standby, .original-seph, .original-cloud{
         height: 20%;
     }
     .kh-standby, .original-seph, .original-cloud{
         height: 20%;
+    }
+    .statBox:first-child {
+        padding-top: 1vh;
     }
 }
 
