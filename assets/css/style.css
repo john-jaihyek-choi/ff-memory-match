@@ -201,6 +201,10 @@ body {
    padding-top: 0.8vh;
 }
 
+.statBox:first-child > {
+   vertical-align: baseline;
+}
+
 .scoreHead {
    height: 35%;
    flex-basis: calc(100%/3);
