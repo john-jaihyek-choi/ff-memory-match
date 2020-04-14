@@ -174,7 +174,7 @@ body {
 }
   
 .statColumn {
-   height: 21%;
+   height: 18%;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
@@ -185,6 +185,7 @@ body {
    font-size: 2.5rem;
    color: white;
    border-radius: 8px;
+   padding-top: 10px;
 }
   
 .statBox{
@@ -196,7 +197,7 @@ body {
 }
 
 .statBox:first-child {
-   height: 30%;
+   height: 26%;
    flex-basis: 100%;
    padding-top: 0.8vh;
 }
@@ -206,12 +207,12 @@ body {
 }
 
 .scoreHead {
-   height: 35%;
+   height: 26%;
    flex-basis: calc(100%/3);
 }
 
 .scoreCount {
-   height: 35%;
+   height: 40%;
    flex-basis: calc(100%/3);
 }
 
