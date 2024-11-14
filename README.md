@@ -125,29 +125,19 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/john-jaihyek-choi/ff-memory-match.git
+1. Clone the repo to your local machine
+
+   ```shell
+   git clone https://github.com/john-jaihyek-choi/ff-memory-match
    ```
+
 2. Navigate to the cloned directory
 
    ```shell
-   cd <repo-name>/
+   cd ff-memory-match
    ```
 
-3. Install all dependencies
-
-   ```shell
-   npm install
-   ```
-
-4. Start the project
-
-   ```shell
-   npm run dev
-   ```
-
-5. Open your default web browser and navigate to http://localhost:3000/ to see the result!
+3. Open the index.html on your browser to get the application running.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,12 +209,12 @@ Project Link: [https://github.com/john-jaihyek-choi/ff-memory-match](https://git
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 List of resources found helpful during development
 
 - source 1
-- source 2
+- source 2 -->
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
