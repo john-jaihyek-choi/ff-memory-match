@@ -78,7 +78,11 @@ Body section for Update -->
 
 ## About The Project
 
-A Final Fantasy VII themed memory match game that dynamically creates card board as user progresses through each stages.
+FF VII Memory Match Game is a static web application themed around Final Fantasy VII, where the game dynamically generates a card board as the user advances through each stage. The application is developed using HTML5 and CSS3, with the core game functionality implemented in Vanilla JavaScript and enhanced by jQuery.
+
+One of the key challenges was dynamically generating card boards that adjust to different stages of the game. To achieve this, I utilized predefined arrays for each level to control the number of cards displayed. Upon completing a stage, event handlers linked to modal options triggered specific functions to advance the game logic. For an engaging user experience, players can choose between two characters on the title screen, each responding with unique actions to indicate correct or incorrect guesses during gameplay.
+
+Developing this project strengthened my proficiency in JavaScript, particularly in dynamic DOM manipulation and event handling, while enhancing my understanding of interactive web development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,10 +101,10 @@ A Final Fantasy VII themed memory match game that dynamically creates card board
 
 ## Architecture Diagram
 
-|              | Languages / Tools / Services                                                                       |
-| ------------ | -------------------------------------------------------------------------------------------------- |
-| **Language** | [![JavaScript][JavaScript]][JavaScript-url] [![HTML5][HTML5]][HTML5-url] [![CSS3][CSS3]][CSS3-url] |
-| **Backend**  | [![EC2][AWSEC2]][AWSEC2-url]                                                                       |
+|                      | Languages / Tools / Services                                                                                                       |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Language**         | [![JavaScript][JavaScript]][JavaScript-url] [![HTML5][HTML5]][HTML5-url] [![CSS3][CSS3]][CSS3-url] [![JQuery][JQuery]][JQuery-url] |
+| **Backend (Server)** | [![EC2][AWSEC2]][AWSEC2-url]                                                                                                       |
 
 <p align="center">
   <img src="images/architecture-diagram.png" alt="Description">
@@ -264,7 +268,7 @@ List of resources found helpful during development
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
